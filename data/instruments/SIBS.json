@@ -1,0 +1,57 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "spirituality": {
+      "positive": [
+        "times of hardship carry meaning",
+        "everything that happens to a person is valuable",
+        "some experiences can only be understood through spiritual beliefs",
+        "spiritual forces can influence events",
+        "life has a purpose",
+        "spiritual activities help people forgive others",
+        "spiritual beliefs can evolve",
+        "there is a greater power",
+        "spiritual beliefs do not need to be reexamined",
+        "spiritual beliefs are more fulfilling than material possessions",
+        "it is possible to have a personal relationship with a greater power",
+        "spiritual activities help one have a personal relationship with a greater power"
+      ],
+      "negative": [
+        "science can explain everything",
+        "fulfillment is possible without an active spiritual life",
+        "spiritual activities do not help people become closer",
+        "prayers do not change what happens",
+        "spiritual activities do not help the development of identity",
+        "meditation does not help people",
+        "people are sometimes pressured to accept spiritual beliefs"
+      ]
+    }
+  },
+  "original_prompts": {
+    "spirituality": {
+      "positive": [
+        "times of hardship carry meaning",
+        "everything that happens to a person is valuable",
+        "some experiences can only be understood through spiritual beliefs",
+        "spiritual forces can influence events",
+        "life has a purpose",
+        "spiritual activities help people forgive others",
+        "spiritual beliefs can evolve",
+        "there is a greater power",
+        "spiritual beliefs do not need to be reexamined",
+        "spiritual beliefs are more fulfilling than material possessions",
+        "it is possible to have a personal relationship with a greater power",
+        "spiritual activities help one have a personal relationship with a greater power"
+      ],
+      "negative": [
+        "science can explain everything",
+        "fulfillment is possible without an active spiritual life",
+        "spiritual activities do not help people become closer",
+        "prayers do not change what happens",
+        "spiritual activities do not help the development of identity",
+        "meditation does not help people",
+        "people are sometimes pressured to accept spiritual beliefs"
+      ]
+    }
+  }
+}

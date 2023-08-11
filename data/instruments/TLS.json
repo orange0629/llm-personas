@@ -1,0 +1,23 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Tightness/LoosenessInCountry": {
+      "positive": ["there are many social norms that people are supposed to abide by in this country",
+        "in this country, there are very clear expectations for how people should act in most situations",
+        "people agree upon what behaviors are appropriate versus inappropriate in most situations in this country",
+         "in this country, if someone acts in an inappropriate way, others will strongly disapprove",
+        "people in this country almost always comply with social norms"],
+      "negative": ["people in this country have a great deal of freedom in deciding how they want to behave in most situations"]
+    }
+  },
+  "original_prompts": {
+    "Tightness/Looseness": {
+      "positive": ["There are many social norms that people are supposed to abide by in this country.",
+        "In this country, there are very clear expectations for how people should act in most situations.",
+        "People agree upon what behaviors are appropriate versus inappropriate in most situations in this country.",
+         "In this country, if someone acts in an inappropriate way, others will strongly disapprove.",
+        "People in this country almost always comply with social norms."],
+      "negative": ["People in this country have a great deal of freedom in deciding how they want to behave in most situations."]
+    }
+  }
+}

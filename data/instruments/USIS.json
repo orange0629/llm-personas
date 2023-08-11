@@ -1,0 +1,24 @@
+{"class": "",
+  "value_key": {},
+  "original_prompts": {
+    "Affirmation": {
+      "positive": [],
+      "negative": ["My feelings about being American are mostly negative.",
+        "I feel negatively about being American.",
+        "I wish I were not American.",
+        "I am not happy with being American.",
+        "If I could choose, I would prefer to not be American.",
+        "I dislike being American."]
+    },
+    "Exploration": {
+      "positive": ["I have experienced things that reflect American culture, such as eating food, listening to music, and watching movies.",
+        "I have attended events that have helped me learn more about the U.S.",
+        "I have read books/magazines/newspapers or other materials that have taught me about the U.S."],
+      "negative": []
+    },
+    "Resolution": {
+      "positive": [],
+      "negative": []
+    }
+  }
+}

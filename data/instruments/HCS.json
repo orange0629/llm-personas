@@ -1,0 +1,73 @@
+{"class": "normative_statements",
+"value_key": {
+  "Attention": {
+    "positive": [
+    "it is impossible to understand the pieces without considering the whole picture",
+      "it makes more sense to study things in their natural context rather than in isolation",
+      "relationships between people are more important than the individuals themselves"
+
+    ],
+    "negative": []
+  },
+  "Causality": {
+    "positive": [],
+    "negative": ["people are mostly independent of one another",
+    "events only occur as a result of individuals' choices and behavior",
+      "each individual person is only responsible for their own actions",
+      "people usually end up doing what they want to, irrespective of norms or expectations"
+    ]
+  },
+  "Contradiction": {"positive": [
+    "something can be both ugly and beautiful at the same time",
+    "in any given situation, what it means to do the right thing depends on who you ask",
+    "it is better to reach a compromise than to argue your point of view",
+    "even two seemingly contradictory ideas can each yield something valuable"
+  ],
+  "negative": []},
+  "Change": {
+    "positive": [],
+    "negative": [
+      "an honest person can be expected to stay honest in the future",
+      "a person's true nature may evolve but it does not change dramatically over time",
+      "it is useful to make future projections based on the present situation",
+      "the course of human history is best described as gradual linear progress"
+    ]
+  }
+},
+"original_prompts": {
+  "Attention": {
+    "positive": [
+    "It is impossible to understand the pieces without considering the whole picture.",
+      "It makes more sense to study things in their natural context rather than in isolation.",
+      "In a painting, the background is just as important as the main object.",
+      "Relationships between people are more important than the individuals themselves."
+
+    ],
+    "negative": []
+  },
+  "Causality": {
+    "positive": [],
+    "negative": ["People are mostly independent of one another.",
+    "Events only occur as a result of individuals' choices and behavior.",
+      "Each individual person is only responsible for his/her own actions.",
+      "People usually end up doing what they want to, irrespective of norms or expectations."
+    ]
+  },
+  "Contradiction": {"positive": [
+    "Something can be both ugly and beautiful at the same time.",
+    "In any given situation, what it means to do the right thing depends on who you ask.",
+    "It is better to reach a compromise than to argue your point of view.",
+    "Even two seemingly contradictory ideas can each yield something valuable."
+  ],
+  "negative": []},
+  "Change": {
+    "positive": [],
+    "negative": [
+      "An honest person can be expected to stay honest in the future.",
+      "A person's true nature may evolve but it does not change dramatically over time.",
+      "It is useful to make future projections based on the present situation.",
+      "The course of human history is best described as gradual linear progress."
+    ]
+  }
+}
+}

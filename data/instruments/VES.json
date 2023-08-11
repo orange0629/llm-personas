@@ -1,0 +1,29 @@
+{
+  "class": "descriptor",
+  "value_key": {
+    "Emotionality": {
+      "positive": ["a very emotional person",
+        "always introspecting",
+        "interested in how others feel",
+        "emotionally aware"],
+      "negative": [
+        "avoiding decision making based on feelings",
+        "keeping feelings under control",
+        "preventing emotional situations",
+        "not a fan of strong emotions"
+      ]
+    }
+  },
+  "original_prompts": {"Emotionality": {
+    "positive": ["I am a very emotional person.",
+      "I consider it important to reflect upon my feelings.",
+      "I find it important to know how others feel.",
+      "It is important for me to be aware of my emotions"],
+    "negative": [
+      "Decision making based on feelings usually leads to mistakes.",
+      "I prefer to keep my feelings under control.",
+      "I try to anticipate on, and prevent, emotional situations.",
+      "I dislike experiencing strong emotions."
+    ]
+  }}
+}

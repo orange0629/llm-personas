@@ -1,0 +1,59 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "AchievementAndSuccess": {
+      "positive": ["money is a really good indicator of a person’s life achievements and success",
+        "one of the best measures of success in life is how much money you have earned",
+        "earning a lot of money is one of the best achievements in life",
+        "being rich is a sign of a great achievement",
+        "money really talks (it talks about your status in life)",
+        "you need money to buy the good things in life"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Achievement and Success": {
+      "positive": ["Money is a really good indicator of a person’s life achievements and success",
+        "One of the best measures of success in life is how much money you have earned",
+        "Earning a lot of money is one of the best achievements in life",
+        "Being rich is a sign of a great achievement",
+        "Money really talks: it talks about your status in life",
+        "You need money to buy the good things in life"],
+      "negative": []
+    },
+    "Saving Concerns": {
+      "positive": ["I never seem to have enough money",
+        "I have a real fear of running out of money",
+        "The amount of money that I have saved is never quite enough",
+        "I constantly worry about how few savings I have",
+        "I seem to worry more than most people about money",
+        "I am really concerned about whether I have enough money saved"],
+      "negative": []
+    },
+    "Mindful and Responsible": {
+      "positive": ["I am pretty good at budgeting",
+        "I am really proud of my ability to save money",
+        "I am much more of a saver than a spender",
+        "It is very important for me to save money for a rainy day",
+        "I keep a close track of my money affairs",
+        "I pay bills immediately to avoid interest and penalties"],
+      "negative": []
+    },
+    "Power and Status": {
+      "positive": ["I enjoy buying expensive products to impress others",
+        "I am quite happy to let people know how much money I have",
+        "I show off to people with the brand name products I have bought",
+        "I am happy to use money to persuade people to help me",
+        "I am proud of my financial 'victories' and tell people about them"],
+      "negative": []
+    },
+    "Financial Literacy Worries": {
+      "positive": ["I feel foolish and embarrassed talking about many money issues",
+        "I wished that I understood financial affairs better than I do",
+        "I feel anxious and defensive when talking about my personal finances",
+        "I really don’t understand financial talk and jargon",
+        "Even thinking about my money makes me anxious"],
+      "negative": []
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Speciation": {
+      "positive": ["of all the races, Whites/Europeans are furthest along in terms of evolutionary progress from our primate ancestors",
+        "each racial group has their own Adam and Eve, or their own original ancestral parents",
+        "just like plants have subspecies, the human race can be subdivided into subspecies (e.g., Blacks, Asians, Whites)",
+        "different races originated independently of one another, for example, the Black race began in Africa, and the White race began in Europe"],
+      "negative": []
+    },
+    "Genotypic": {
+      "positive": ["during an autopsy, the race of a person can be determined by examining bone structure",
+        "races can be identified by genetic patterns",
+        "racial groups not only have different skin colors, but also have different bone structures, muscle fibers, and genetic foundations"],
+      "negative": ["you cannot determine a person’s race simply by looking at their DNA structure"]
+    },
+    "Phenotypic": {
+      "positive": ["race is about how people look on the outside (e.g., skin color, hair texture)",
+        "race groups are formed based on similar physical traits such as skin color or hair texture",
+        "race is based on physical appearance",
+        "race can be determined by looking at someone’s phenotypic characteristics (e.g., skin color and hair texture)"],
+      "negative": []
+    },
+    "Behavioral": {
+      "positive": ["different races have different behavioral tendencies, for example, some races are louder and more outspoken than others",
+        "people of the same race share similar behavioral characteristics (e.g., the tendency to speak loudly or quietly) that they do not share with people of different races",
+        "some racial groups value education more than others"],
+      "negative": ["racial groups (e.g., Blacks, Asians, Whites) are too broad to say that members share behavioral tendencies such as speaking loudly or quietly"]
+    }
+  },
+  "original_prompts": {
+    "Speciation": {
+      "positive": ["Of all the races, Whites/Europeans are furthest along in terms of evolutionary progress from our primate ancestors.",
+        "Each racial group has their own Adam and Eve, or their own original ancestral parents.",
+        "Just like plants have subspecies, the human race can be subdivided into subspecies (e.g., Blacks, Asians, Whites).",
+        "Different races originated independently of one another, for example, the Black race began in Africa, and the White race began in Europe."],
+      "negative": []
+    },
+    "Genotypic": {
+      "positive": ["During an autopsy, the race of a person can be determined by examining bone structure.",
+        "Races can be identified by genetic patterns.",
+        "Racial groups not only have different skin colors, but also have different bone structures, muscle fibers, and genetic foundations."],
+      "negative": ["You cannot determine a person’s race simply by looking at their DNA structure."]
+    },
+    "Phenotypic": {
+      "positive": ["Race is about how people look on the outside (e.g., skin color, hair texture).",
+        "Race groups are formed based on similar physical traits such as skin color or hair texture.",
+        "Race is based on physical appearance.",
+        "Race can be determined by looking at someone’s phenotypic characteristics (e.g., skin color and hair texture)."],
+      "negative": []
+    },
+    "Behavioral": {
+      "positive": ["Different races have different behavioral tendencies, for example, some races are louder and more outspoken than others.",
+        "People of the same race share similar behavioral characteristics (e.g., the tendency to speak loudly or quietly) that they do not share with people of different races.",
+        "Some racial groups value education more than others."],
+      "negative": ["Racial groups (e.g., Blacks, Asians, Whites) are too broad to say that members share behavioral tendencies such as speaking loudly or quietly."]
+    }
+  }
+}

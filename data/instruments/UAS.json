@@ -1,0 +1,67 @@
+{"class": "normative_statements",
+"value_key": {
+"Utopia_Appraisal": {
+    "positive": ["our society will be transformed into an ideal society",
+      "it is possible that our society could approach an ideal",
+      "there is good reason to believe that an ideal society can be achieved",
+      "one must play their part in bringing about positive changes to improve society",
+      "there are lots of examples when we have changed our society for the better",
+      "one's own actions can help bring about positive change to move society closer to the ideal"],
+    "negative": ["there is no chance our society will ever become like an ideal society",
+      "an ideal society may or may not be achieved",
+      "it is really hard to think of realistic ways of achieving an ideal society",
+      "an ordinary citizen cannot be expected to contribute that much to bringing about an ideal society",
+      "it is difficult to think of times when we have achieved substantial changes to our society"
+    ]
+  },
+  "Society_Appraisal": {
+    "positive": ["ordinary citizens, like us, had a strong role to play in making our society what it is today",
+    "our society is a credit to our citizens and makes us look good",
+    "you can tell a lot about the citizens of a society by looking at how the society operates as a whole",
+    "it is possible that society can be changed fundamentally"],
+    "negative": ["there is something wrong about the way current society works",
+      "what is happening in current society is not right",
+      "most ordinary people had little say in how society has developed up to now",
+      "current society is full of immorality",
+      "the way current society operates causes personal disadvantage or hardship",
+      "there is a great deal of incompetence in current society",
+      "the way society currently operates makes us all look bad",
+      "there is little chance that society can be made to undergo substantial change",
+      "if changes can be made to society, they will only be minor ones"
+      ]
+  }
+},
+"original_prompts": {
+  "Utopia Appraisal": {
+    "positive": [" think our society will be transformed into my ideal society.",
+      "It is possible that our society could approach my ideal.",
+      "There is good reason to believe that my ideal society can be achieved.",
+      "I must play my part in bringing about positive changes to improve my society.",
+      "I can think of lots of examples when we have changed our society for the better.",
+      "I feel that my own actions can help bring about positive change to move society closer to the ideal."],
+    "negative": ["There is no chance our society will ever become like my ideal society.",
+      "I do not know whether my ideal society will be achieved or not.",
+      "It is really hard to think of realistic ways of achieving my ideal society.",
+      "An ordinary citizen cannot be expected to contribute that much to bringing about an ideal society.",
+      "I am not responsible for bringing about change in my society.",
+      "It is difficult to think of times when we have achieved substantial changes to our society."
+    ]
+  },
+  "Society Appraisal": {
+    "positive": ["Ordinary citizens, like us, had a strong role to play in making our society what it is today.",
+    "Our society is a credit to our citizens and makes us look good.",
+    "You can tell a lot about the citizens of a society by looking at how the society operates as a whole.",
+    "It is possible that our society can be changed fundamentally."],
+    "negative": ["There is something wrong about the way our current society works.",
+      "What is happening in our current society is not right.",
+      "Most ordinary people like me had little say in how society has developed up to now.",
+      "Our current society is full of immorality.",
+      "The way our current society operates causes me personal disadvantage or hardship.",
+      "There is a great deal of incompetence in our current society.",
+      "The way society currently operates makes us all look bad.",
+      "There is little chance that our society can be made to undergo substantial change.",
+      "If changes can be made to our society, they will only be minor ones."
+      ]
+  }
+}
+}

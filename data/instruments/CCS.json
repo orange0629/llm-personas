@@ -1,0 +1,76 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Honor": {
+      "positive": ["it is a disgrace if there is gossip about you",
+        "honor is the most important thing for people",
+        "communities should monitor if people observe the unwritten rules",
+        "members of a family should feel responsible for preserving and protecting another family member’s honor"],
+      "negative": []
+    },
+    "Agency": {
+      "positive": ["you are responsible for the important choices in your life",
+        "everyone is responsible for their own life",
+        "striving for autonomy is considered good"],
+      "negative": []
+    },
+    "Loyalty": {
+      "positive": ["people should experience the problems of their family members as if they were their own problems",
+        "family ties should be very strong",
+        "people should support their family members, even if they do not want to",
+        "you should be expected to do what you can when a family member needs you"],
+      "negative": []
+    },
+    "Hierarchy": {
+      "positive": ["men have a more important voice than women",
+        "your elders’ opinions are more important than your own opinions are",
+        "older people have a higher status than the young",
+        "some people in your family have more to say, and others less"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Honor": {
+      "positive": ["In my community, it is considered a disgrace if there is gossip about you.",
+        "In my community, honor is the most important thing for people.",
+        "Our community monitors if people observe the unwritten rules.",
+        "In my community, members of the family feel responsible for preserving and protecting another family member’s honor.",
+      "I would consider it a disgrace if there would be gossip about me.",
+        "Honor is the most important thing for me.",
+        "I monitor if people (from my community) observe the unwritten rules.",
+       "I feel responsible for preserving and protecting my family member’s honor."],
+      "negative": []
+    },
+    "Agency": {
+      "positive": ["In my community, you are responsible for the important choices in your life.",
+        "In my community, everyone is responsible for their own life.",
+        "In my community striving for autonomy is considered good.",
+      "I am responsible for the important choices in my life.",
+        "I am responsible for my own life.",
+        "I consider striving for autonomy as good."],
+      "negative": []
+    },
+    "Loyalty": {
+      "positive": ["In my community people experience the problems of their family members as if they were their own problems.",
+        "In my community family ties are very strong.",
+        "People are expected to support their family members, even if they do not want to.",
+        "In my community you are expected to do what you can when a family member needs you.",
+      "I experience the problems of family members as if they were my own problems.",
+        "My ties with my family are very strong.",
+        "I would support my family members, even if I wouldn’t want to.",
+        "I will do what I can when a family member needs me."],
+      "negative": []
+    },
+    "Hierarchy": {
+      "positive": ["In my community, it is generally believed that men have a more important voice than women.",
+        "In my community, your elders’ opinions are more important than your own opinions are.",
+        "In my community people believe that older people have a higher status than the young.",
+        "In my community you are expected to accept that some people in your family have more to say, and others less.",
+      "I believe men should have a more important voice than women.",
+        "My elders’ opinions are more important to me than my own opinions are.",
+        "I think that older people have a higher status than the young.",
+        "I accept that certain people in my family have more to say than others."],
+      "negative": []
+    }
+  }
+}

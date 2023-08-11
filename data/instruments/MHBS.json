@@ -1,0 +1,111 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Masculine Courage": {
+      "positive": ["it is very important for a man to act bravely",
+        "a man should not be afraid to fight",
+        "it is important for a man to be able to face danger",
+        "it is important for a man to be able to take pain",
+        "it is important for a man to be courageous"],
+      "negative": []
+    },
+    "Pride in Manhood": {
+      "positive": ["it is important for a man to be more masculine than other men",
+        "a man should be embarrassed if someone calls him a wimp",
+        "a man should be expected to fight for himself",
+        "if a man does not defend his wife, he is not a very strong man",
+        "if a man does not defend himself, he is not a very strong man"],
+      "negative": []
+    },
+    "Virtue": {
+      "positive": ["you would praise a man who reacted aggressively to an insult",
+        "physical aggression is always admirable and acceptable",
+        "it is morally wrong for a man to walk away from a fight",
+        "'a man who doesn't take any crap from anybody' is an admirable reputation to have",
+        "physical violence is the most honorable way to defend yourself"],
+      "negative": []
+    },
+    "Protection": {
+      "positive": ["a man should do whatever it takes to protect his wife because it is the right thing to do",
+        "if a man cares about his wife, he should protect her even if everyone else thinks it's wrong",
+        "a man should stand up for a female who is in his family or is a close friend",
+        "it is a male's responsibility to protect his family",
+        "a man should protect his wife"],
+      "negative": []
+    },
+    "Provocation/Insult": {
+      "positive": ["if a man's wife is insulted, his manhood is insulted",
+        "if a man's mother is insulted, his manhood is insulted",
+        "if a man's father is insulted, his manhood is insulted",
+        "if a man is insulted, his manhood is insulted",
+        "if a man's brother is insulted, his manhood is insulted"],
+      "negative": []
+    },
+    "Family and Community Bonds": {
+      "positive": ["it is important to spend time with the members of one's family",
+        "it is important for a man to be loyal to his family",
+        "a man's family should be his number one priority",
+        "it is important to interact with other members of your community",
+        "it is a man's responsibility to respect his family"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Masculine Courage": {
+      "positive": ["It is very important for a man to act bravely.",
+        "A man should not be afraid to fight.",
+        "It is important for a man to be able to face danger.",
+        "It is important for a man to be able to take pain.",
+        "It is important for a man to be courageous."],
+      "negative": []
+    },
+    "Pride in Manhood": {
+      "positive": ["It is important for a man to be more masculine than other men.",
+        "A man should be embarrassed if someone calls him a wimp.",
+        "A man should be expected to fight for himself.",
+        "If a man does not defend his wife, he is not a very strong man.",
+        "If a man does not defend himself, he is not a very strong man."],
+      "negative": []
+    },
+    "Socialization": {
+      "positive": ["If your son got into a fight, you would be proud that he stood up for himself.",
+        "You would want your son to stand up to bullies.",
+        "As a child you were taught that boys should defend girls.",
+        "If your son got into a fight to defend his sister, you would be proud that he protected his sister.",
+        "As a child you were taught that boys should always defend themselves."],
+      "negative": []
+    },
+    "Virtue": {
+      "positive": ["You would praise a man who reacted aggressively to an insult.",
+        "Physical aggression is always admirable and acceptable.",
+        "It is morally wrong for a man to walk away from a fight.",
+        "'A man who doesn't take any crap from anybody' is an admirable reputation to have.",
+        "Physical violence is the most honorable way to defend yourself."],
+      "negative": []
+    },
+    "Protection": {
+      "positive": ["A man should do whatever it takes to protect his wife because it is the right thing to do.",
+        "If a man cares about his wife, he should protect her even if everyone else thinks it's wrong.",
+        "A man should stand up for a female who is in his family or is a close friend.",
+        "It is a male's responsibility to protect his family.",
+        "A man should protect his wife."],
+      "negative": []
+    },
+    "Provocation/Insult": {
+      "positive": ["If a man's wife is insulted, his manhood is insulted.",
+        "If a man's mother is insulted, his manhood is insulted.",
+        "If a man's father is insulted, his manhood is insulted.",
+        "If a man is insulted, his manhood is insulted.",
+        "If a man's brother is insulted, his manhood is insulted."],
+      "negative": []
+    },
+    "Family and Community Bonds": {
+      "positive": ["It is important to spend time with the members of your family.",
+        "It is important for a man to be loyal to his family.",
+        "A man's family should be his number one priority.",
+        "It is important to interact with other members of your community.",
+        "It is a man's responsibility to respect his family."],
+      "negative": []
+    }
+  }
+}

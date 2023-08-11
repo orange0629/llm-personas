@@ -1,0 +1,49 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Sense of Unity": {
+      "positive": ["despite the different cultures in the country, we are all part of a single community",
+        "despite cultural differences, all groups together form our society",
+        "despite all our differences there has to be the feeling that we are one nation and we have to make it together",
+        "unity against the background of diversity should be our motto"],
+      "negative": []
+    },
+    "Flexibility": {
+      "positive": ["the cultural identity of people is not fixed, but very changeable",
+        "it is important for our society that people dare to let go of aspects of their cultural identity and incorporate new influences in their sense of self",
+        "in our diverse society, new border-crossing identities are needed",
+        "in a diverse society, what people can become together is more important than what they happen to be"],
+      "negative": []
+    },
+    "Dialogue": {
+      "positive": ["we can only make progress as a country when we are prepared to enter into open dialogue with each other",
+        "only by really listening to each other can differences be reconciled",
+        "in interactions with people who arc different, something new and valuable can develop",
+        "mutual trust will only develop when people are willing to enter into dialogue"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Sense of Unity": {
+      "positive": ["Despite the different cultures in (the USA/the Netherlands), we are all part of a single community.",
+        "Despite cultural differences, all groups together form [American/ Dutch) society.",
+        "Despite all our differences there has to be the feeling that we are one nation and we have to make it together.",
+        "Unity against the background of diversity should be the (American/Dutch) motto."],
+      "negative": []
+    },
+    "Flexibility": {
+      "positive": ["The cultural identity of people is not fixed, but very changeable.",
+        "It is important for our society that people dare to let go of aspects of their cultural identity and incorporate new influences in their sense of self.",
+        "In our diverse society, new border-crossing identities are needed.",
+        "In a diverse society, what people can become together is more important than what they happen to be. "],
+      "negative": []
+    },
+    "Dialogue": {
+      "positive": ["We can only make progress as a country when we are prepared to enter into open dialogue with each other.",
+        "Only by really listening to each other can differences be reconciled.",
+        "In interactions with people who arc different, something new and valuable can develop.",
+        "Mutual trust will only develop when people are willing to enter into dialogue."],
+      "negative": []
+    }
+  }
+}

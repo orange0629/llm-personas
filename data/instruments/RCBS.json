@@ -1,0 +1,32 @@
+{"class": "normative_statements",
+"value_key": {"Tradition": {
+    "positive": ["approaches used by people in the past are generally the most effective",
+    "the established way of doing things should be protected and preserved",
+    "traditions reflect wisdom and knowledge"],
+    "negative": ["following traditions tends to create a closed-minded society"]
+  },
+  "Gradual_Change": {
+    "positive": ["if society is going to change, it should occur slowly and naturally",
+    "fast or radical changes are unwise and dangerous",
+    "making sudden changes tends to create more problems than solutions",
+    "slow, gradual change helps prevent catastrophes and mistakes",
+    "quick changes are acceptable if they restore things to how they were before"],
+    "negative": []
+  }},
+"original_prompts": {
+  "Tradition": {
+    "positive": ["Approaches used by people in the past are generally the most effective.",
+    "The established way of doing things should be protected and preserved.",
+    "Traditions reflect wisdom and knowledge."],
+    "negative": ["Following traditions tends to create a closed-minded society."]
+  },
+  "Gradual change": {
+    "positive": ["If society is going to change, it should occur slowly and naturally.",
+    "Fast or radical changes are unwise and dangerous.",
+    "Making sudden changes tends to create more problems than solutions.",
+    "Slow, gradual change helps prevent catastrophes and mistakes.",
+    "Quick changes are acceptable if they restore things to how they were before."],
+    "negative": []
+  }
+}
+}

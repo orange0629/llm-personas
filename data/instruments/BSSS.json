@@ -1,0 +1,29 @@
+{"class": "descriptor",
+  "value_key": {
+    "Sensation-seeking": {
+      "positive": ["happy to explore strange places",
+        "restless when I spend too much time at home",
+        "happy to do frightening things",
+        "liking wild parties",
+        "happy to take off on a trip with no pre-planned routes or timetables",
+        "happy to have friends who are excitingly unpredictable",
+        "happy to try bungee jumping",
+        "appreciative of new and exciting experiences, even if they are illegal"
+      ],
+    "negative": []
+    }},
+  "original_prompts": {
+    "Sensation-seeking": {
+      "positive": ["I would like to explore strange places.",
+        "I get restless when I spend too much time at home.",
+        "I like to do frightening things.",
+        "I like wild parties.",
+        "I would like to take off on a trip with no pre-planned routes or timetables.",
+        "I prefer friends who are excitingly unpredictable.",
+        "I would like to try bungee jumping.",
+        "I would love to have new and exciting experiences, even if they are illegal."
+      ],
+    "negative": []
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Sexism": {
+      "positive": [
+        "people should treat men differently than women",
+        "it's acceptable to exclude some people",
+        "women should defer to men"
+      ],
+      "negative": [
+        "people should treat women like they're good at math",
+        "women have a lot to contribute to the group",
+        "no one should be made fun of",
+        "group members should be friendly towards each other",
+        "it is okay to ask for help"
+      ]
+    }
+  },
+  "original_prompts": {
+    "Sexism": {
+      "positive": [
+        "Members should treat men differently than women.",
+        "It's acceptable to exclude some people.",
+        "Women should defer to men."
+      ],
+      "negative": [
+        "Members should treat women like they're good at math.",
+        "Women have a lot to contribute to the group.",
+        "No one should be made fun of.",
+        "Group members should be friendly towards each other.",
+        "It is okay to ask for help."
+      ]
+    }
+  }
+}

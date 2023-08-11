@@ -1,0 +1,118 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Pro-Military": {
+      "positive": [
+        "the military should always be kept strong",
+        "the military is a dissuasive force against external threats"
+      ],
+      "negative": ["eliminating the military would bring peace",
+        "the military should be completely eliminated",
+        "the armed forces are redundant",
+        "the existence of the military is a threat to peace",
+        "the presence of military prevents the development of democracy",
+        "the military limits the society",
+        "military ceremonies are a waste of time",
+        "the presence of the military hinders individual freedom"]
+    },
+    "ValueMilitary": {
+      "positive": [
+        "the military should be held above all other institutions",
+        "all actions done by the military are to the benefit of the society",
+        "news that depicts the military in a negative light should not be featured in the media",
+        "the military should be approved without question",
+        "the military is better than a lot of civil institutions",
+        "the military is an institution worthy of respect"],
+      "negative": []
+    },
+    "SupportMilitarySystem": {
+      "positive": [
+        "in the existing military system, everybody gets what they deserve",
+        "everybody has equal and fair rights in the military system",
+        "the military system is reliable and healthy"],
+      "negative": ["the military system deteriorates every year",
+        "the military system does not care about personal characteristics and individual thought",
+        "the existing military system is closed to criticism",
+        "the military system should be restructured",
+        "the military is an artificial system that has been constructed to protect the existing order"
+      ]
+    },
+    "SupportMilitaryInPolitics": {
+      "positive": ["military coups carry the country back",
+        "the military should play an active role in politics",
+        "the capabilities and power of military over the ruling class should be increased"],
+      "negative": [
+        "the military should be impartial in political matters",
+        "the effect of military on the state should be reduced"
+      ]
+    },
+    "Support Compulsory Service": {
+      "positive": ["conscientious objection hurts the military system",
+        "military service is a sacred duty"],
+      "negative": ["military service should be based on the principles of conscience and volunteerism",
+        "doing military service is a waste of time"]
+    }
+  },
+  "original_prompts": {
+    "Pro-Military": {
+      "positive": [
+        "Military should always be kept strong.",
+        "It relieves me that military is a dissuasive force against the external threats.",
+        "Feeling the presence of military comforts me."
+      ],
+      "negative": ["Eliminating military would bring peace.",
+        "Military should be completely eliminated.",
+        "Armed forces are redundant.",
+        "The existence of the military is a threat to peace.",
+        "Military encourages people to use a gun.",
+        "The presence of military prevents the development of democracy.",
+        "I think that military limits the society.",
+        "Military ceremonies are a waste of time.",
+        "The presence of military hinders individual freedom."]
+    },
+    "Value the Military": {
+      "positive": ["Military has a major role in the formation of Turkish identity.",
+        "Military should be held above all other institutions.",
+        "There is a strong relationship between military and the Turkish culture.",
+        "Military is a result of long-term accumulation.",
+        "All actions done by military are to the benefit of the society.",
+        "Military holds the Turkish society together.",
+        "News that depicts military in a negative light should not be featured in the media.",
+        "Military should be approved without question.",
+        "Overall, military is better than a lot of civil institutions.",
+        "Military is an institution worthy of respect."],
+      "negative": []
+    },
+    "Support Military System": {
+      "positive": [
+        "In the existing military system, everybody gets what they deserve.",
+        "Everybody has equal and fair rights in the military system.",
+        "I believe that the military system is reliable and healthy."],
+      "negative": ["The military system deteriorates every year.",
+        "The military system does not care about personal characteristics and individual thought.",
+        "Expressions such as every Turk is born a soldier have been constructed to protect the military system.",
+        "The existing military system is closed to criticism.",
+        "The military system should be restructured.",
+        "Military is an artificial system that has been constructed to protect the existing order."
+      ]
+    },
+    "Support Military in Politics": {
+      "positive": ["Military coups carry the country back.",
+        "Military should play an active role in politics.",
+        "The capabilities and power of military on the ruling should be increased."],
+      "negative": [
+        "Military should be impartial in political matters.",
+        "The effect of military on the state should be reduced."
+      ]
+    },
+    "Support Compulsory Service": {
+      "positive": ["Conscientious objection hurts the military system.",
+        "Military service by payment is not suitable for the Turkish society.",
+        "Military service should be based on the principles of conscience and volunteerism.",
+        "Every Turkish (man) citizen should fulfill their military service duty.",
+        "Military service is a sacred duty.",
+        "I would not hesitate to sacrifice my life for the country."],
+      "negative": ["Doing military service is a waste of time."]
+    }
+  }
+}

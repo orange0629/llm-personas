@@ -1,0 +1,82 @@
+{"class": "value_noun",
+  "value_key": {
+    "Truthfulness": {
+      "positive": ["keeping promises"],
+      "negative": []
+    },
+    "Perseverance": {
+      "positive": ["diligence"],
+      "negative": []
+    },
+    "Wisdom": {
+      "positive": ["thinking through decisions before carrying them out"],
+      "negative": []
+    },
+    "Generosity": {
+      "positive": ["offering help when someone asks"],
+      "negative": []
+    },
+    "Mindfulness": {
+      "positive": ["meditating"],
+      "negative": []
+    },
+    "Patience": {
+      "positive": ["not reacting when disappointed or provoked"],
+      "negative": []
+    },
+    "Equanimity": {
+      "positive": ["overcoming losses and separations"],
+      "negative": []
+    },
+    "Determination": {
+      "positive": ["setting goals and following through"],
+      "negative": []
+    },
+    "Kindness": {
+      "positive": ["showing kindness to people in trouble"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Truthfulness": {
+      "positive": ["keeping promises"],
+      "negative": []
+    },
+    "Perseverance": {
+      "positive": ["diligence"],
+      "negative": []
+    },
+    "Wisdom": {
+      "positive": ["thinking through decisions before carrying them out"],
+      "negative": []
+    },
+    "Generosity": {
+      "positive": ["offering help when someone asks"],
+      "negative": []
+    },
+    "Morality": {
+      "positive": ["following the five precepts"],
+      "negative": []
+    },
+    "Mindfulness": {
+      "positive": ["meditating"],
+      "negative": []
+    },
+    "Patience": {
+      "positive": ["not reacting when disappointed or provoked"],
+      "negative": []
+    },
+    "Equanimity": {
+      "positive": ["overcoming losses and separations"],
+      "negative": []
+    },
+    "Determination": {
+      "positive": ["setting goals and following through"],
+      "negative": []
+    },
+    "Kindness": {
+      "positive": ["showing kindness to people in trouble"],
+      "negative": []
+    }
+  }
+}

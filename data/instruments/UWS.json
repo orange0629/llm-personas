@@ -1,0 +1,21 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "BeliefInUnjustness": {
+      "positive": ["a lot of people suffer an unjust fate",
+        "even important decisions are often unfair",
+        "the world is an unjust place",
+        "people won't be compensated for injustices they suffer"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Belief in Unjustness": {
+      "positive": ["A lot of people suffer an unjust fate.",
+        "I feel that even important decisions are often unfair.",
+        "I basically believe the world is an unjust place.",
+        "I feel that people won't be compensated for injustices too often."],
+      "negative": []
+    }
+  }
+}

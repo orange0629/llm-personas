@@ -1,0 +1,167 @@
+{
+  "class": "descriptor",
+  "value_key": {
+    "neuroticism": {
+      "negative": [
+        "relaxed most of the time",
+        "seldom blue"
+      ],
+      "positive": [
+        "easily stressed out",
+        "worrying about things",
+        "easily disturbed",
+        "easily upset",
+        "changing my mood frequently",
+        "having frequent mood swings",
+        "easily irritated",
+        "often blue"
+      ]
+    },
+    "conscientiousness": {
+      "positive": [
+        "always prepared",
+        "detail-oriented",
+        "getting chores done right away",
+        "liking order",
+        "following a schedule",
+        "exacting in my work"
+      ],
+      "negative": [
+        "leaving my belongings around",
+        "making a mess of things",
+        "often forgetting to put things back in their proper place",
+        "shirking my duties"
+      ]
+    },
+    "extroversion": {
+      "positive": [
+        "the life of the party",
+        "comfortable around people",
+        "starting conversations",
+        "talking to a lot of different people at parties",
+        "the center of attention"
+      ],
+      "negative": [
+        "not talking a lot",
+        "keeping in the background",
+        "having little to say",
+        "not drawing attention to myself",
+        "quiet around strangers"
+      ]
+    },
+    "agreeableness": {
+      "positive": [
+        "interested in people",
+        "sympathizing with others' feelings",
+        "in possession of a soft heart",
+        "taking time out for others",
+        "feeling others' emotions",
+        "making people feel at ease"
+      ],
+      "negative": [
+        "not really interested in others",
+        "often insulting people",
+        "not interested in other people's problems",
+        "feeling little concern for others"
+      ]
+    },
+    "imagination": {
+      "positive": [
+        "in possession of a rich vocabulary",
+        "in possession of a vivid imagination",
+        "in possession of excellent ideas",
+        "quick to understand things",
+        "using difficult words",
+        "spending time reflecting on things",
+        "full of ideas"
+      ],
+      "negative": [
+        "having difficulty understanding abstract ideas",
+        "not interested in abstract ideas",
+        "not in possession of a good imagination"
+      ]
+    }
+  },
+  "original_prompts": {
+    "extroversion": {
+      "positive": [
+        "Am the life of the party.",
+        "Feel comfortable around people.",
+        "Start conversations.",
+        "Talk to a lot of different people at parties.",
+        "Don't mind being the center of attention."
+      ],
+      "negative": [
+        "Don't talk a lot.",
+        "Keep in the background.",
+        "Have little to say.",
+        "Don't like to draw attention to myself.",
+        "Am quiet around strangers."
+      ]
+    },
+    "agreeableness": {
+      "positive": [
+        "Am interested in people.",
+        "Sympathize with others' feelings.",
+        "Have a soft heart.",
+        "Take time out for others.",
+        "Feel others' emotions.",
+        "Make people feel at ease."
+      ],
+      "negative": [
+        "Am not really interested in others.",
+        "Insult people.",
+        "Am not interested in other people's problems.",
+        "Feel little concern for others."
+      ]
+    },
+    "conscientiousness": {
+      "positive": [
+        "Am always prepared.",
+        "Pay attention to details.",
+        "Get chores done right away.",
+        "Like order.",
+        "Follow a schedule.",
+        "Am exacting in my work."
+      ],
+      "negative": [
+        "Leave my belongings around.",
+        "Make a mess of things.",
+        "Often forget to put things back in their proper place.",
+        "Shirk my duties."
+      ]
+    },
+    "neuroticism": {
+      "negative": [
+        "Am relaxed most of the time.",
+        "Seldom feel blue."
+      ],
+      "positive": [
+        "Get stressed out easily.",
+        "Worry about things.",
+        "Am easily disturbed.",
+        "Get upset easily.",
+        "Change my mood a lot.",
+        "Have frequent mood swings.",
+        "Get irritated easily.",
+        "Often feel blue."
+      ]
+    },
+    "imagination": {
+      "positive": [
+        "Have a rich vocabulary.",
+        "Have a vivid imagination.",
+        "Have excellent ideas.",
+        "Am quick to understand things.",
+        "Use difficult words.",
+        "Spend time reflecting on things.",
+        "Am full of ideas."
+      ],
+      "negative": [
+        "Have difficulty understanding abstract ideas.",
+        "Am not interested in abstract ideas.",
+        "Do not have a good imagination."
+      ]
+    }
+  }
+}

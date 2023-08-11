@@ -1,0 +1,57 @@
+{"class": "normative_statements",
+  "value_key": {
+    "Idealism": {
+      "positive": ["a person should make certain that their actions never intentionally harm another even to a small degree",
+      "risks to another should never be tolerated, irrespective of how small the risks might be",
+      "the existence of potential harm to others is always wrong, irrespective of the benefits to be gained",
+        "one should never psychologically or physically harm another person",
+  "one should not perform an action which might in any way threaten the dignity and welfare of another individual",
+  "if an action could harm an innocent other, then it should not be done",
+"deciding whether or not to perform an act by balancing the positive consequences of the act against the negative consequences is immoral",
+"the dignity and welfare of people should be the most important concern in any society",
+"it is never necessary to sacrifice the welfare of others",
+"moral actions are those which closely match ideals of the most perfect action"],
+      "negative": []
+    },
+    "Relativism": {
+      "positive": ["there are no ethical principles that are so important that they should be a part of any code of ethics",
+        "what is ethical varies from one situation and society to another",
+      "moral standards should be seen as being individualistic; what one person considers to be moral may be judged to be immoral by another person",
+      "different types of moralities cannot be compared as to rightness",
+      "questions of what is ethical for everyone can never be resolved since what is moral or immoral is up to the individual",
+        "moral standards are simply personal rules which indicate how a person should behave, and are not to be applied in making judgments of others",
+        "ethical considerations in interpersonal relations are so complex that individuals should be allowed to formulate their own individual codes",
+        "rigidly codifying an ethical position that prevents certain types of actions could stand in the way of better human relations and adjustment",
+      "no rule concerning lying can be formulated; whether a lie is permissible or not permissible totally depends upon the situation",
+      "whether a lie is judged to be moral or immoral depends upon the circumstances surrounding the action"],
+      "negative": []
+    }},
+  "original_prompts": {
+    "Idealism": {
+      "positive": ["A person should make certain that their actions never intentionally harm another even to a small degree.",
+      "Risks to another should never be tolerated, irrespective of how small the risks might be.",
+      "The existence of potential harm to others is always wrong, irrespective of the benefits to be gained.",
+        "One should never psychologically or physically harm another person.",
+  "One should not perform an action which might in any way threaten the dignity and welfare of another individual.",
+  "If an action could harm an innocent other, then it should not be done.",
+"Deciding whether or not to perform an act by balancing the positive consequences of the act against the negative consequences is immoral.",
+"The dignity and welfare of people should be the most important concern in any society.",
+"It is never necessary to sacrifice the welfare of others.",
+"Moral actions are those which closely match ideals of the most \"perfect\" action."],
+      "negative": []
+    },
+    "Relativism": {
+      "positive": ["There are no ethical principles that are so important that they should be a part of any code of ethics.",
+        "What is ethical varies from one situation and society to another.",
+      "Moral standards should be seen as being individualistic; what one person considers to be moral may be judged to be immoral by another person.",
+      "Different types of moralities cannot be compared as to \"rightness.\"",
+      "Questions of what is ethical for everyone can never be resolved since what is moral or immoral is up to the individual.",
+        "Moral standards are simply personal rules which indicate how a person should behave, and are not to be applied in making judgments of others.",
+        "Ethical considerations in interpersonal relations are so complex that individuals should be allowed to formulate their own individual codes.",
+        "Rigidly codifying an ethical position that prevents certain types of actions could stand in the way of better human relations and adjustment.",
+      "No rule concerning lying can be formulated; whether a lie is permissible or not permissible totally depends upon the situation.",
+      "Whether a lie is judged to be moral or immoral depends upon the circumstances surrounding the action."],
+      "negative": []
+    }
+  }
+}

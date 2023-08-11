@@ -1,0 +1,86 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "System Inequality": {
+      "positive": ["affirmative action is an outdated policy now that people are generally treated as equals",
+        "discrimination does not exist today to such a degree that affirmative action policies are necessary",
+        "affirmative action does not help eradicate discrimination; instead it exacerbates it by promoting people on the basis of minority status instead of merit",
+        "affirmative action is a problem because it treats people unequally",
+        "people who complain about discrimination are often just blaming other people for their own problems"
+      ],
+      "negative": []
+    },
+    "Competition": {
+      "positive": [
+        "people should be allowed to compete to ensure that the best person wins",
+        "being competitive is part of human nature",
+        "competition is a good way to discover and motivate the best people",
+        "shielding children from competition does not prepare them for adulthood",
+        "fairness means letting people have equal opportunity, not guaranteeing equal outcome",
+        "to get ahead in the world, people have to depend on themselves more than anyone else"
+      ],
+      "negative": []
+    },
+    "Personal Wherewithal": {
+      "positive": ["anybody can get ahead in the world if they learn to play the game",
+        "any goal can be achieved with enough hard work and talent",
+        "pretty much everyone is free to live any kind of life they want",
+        "when it comes to challenges like discrimination, individuals just have to be tough enough to overcome them",
+        "if you’re smart and strong enough, discrimination won’t hold you back",
+        "a person’s success in life is determined more by his or her personal efforts than by society",
+        "anyone who is willing to work hard can be successful"],
+      "negative": []
+    },
+    "Government Interference": {
+      "positive": ["a problem with government social programs is that they get in the way of personal freedom",
+        "the government is inefficient, and therefore should not interfere in the private sector",
+        "the government often hurts individual ambition when it interferes",
+        "the government does not have a right to take what you earn and give it to someone else",
+        "social programs sponsored by the government provide false incentives and unearned rewards"],
+      "negative": ["it's right for the government to get involved in individuals' lives"]
+    }
+  },
+  "original_prompts": {
+    "System Inequality": {
+      "positive": ["Affirmative action is an outdated policy now that people are generally treated as equals.",
+        "Discrimination does not exist today to such a degree that affirmative action policies are necessary.",
+        "Affirmative action does not help eradicate discrimination. Instead it exacerbates it by promoting people on the basis of minority status instead of merit.",
+        "Affirmative action is a problem because it treats people unequally.",
+        "People who complain about discrimination are often just blaming other people for their own problems.",
+        "I think people imagine more barriers, such as discrimination, than actually exist.",
+        "Based on my own experience and the people around me, it’s hard for me to feel sorry for people who complain about discrimination."
+      ],
+      "negative": []
+    },
+    "Competition": {
+      "positive": [
+        "People should be allowed to compete to ensure that the best person wins.",
+        "Being competitive is part of human nature.",
+        "Competition is a good way to discover and motivate the best people.",
+        "Shielding children from competition does not prepare them for adulthood.",
+        "Fairness means letting people have equal opportunity, not guaranteeing equal outcome.",
+        "To get ahead in the world, people have to depend on themselves more than anyone else."
+      ],
+      "negative": []
+    },
+    "Personal Wherewithal": {
+      "positive": ["Anybody can get ahead in the world if they learn to play the game.",
+        "Any goal can be achieved with enough hard work and talent.",
+        "Right now, pretty much all Americans are free to live any kind of life they want.",
+        "When it comes to challenges like discrimination, individuals just have to be tough enough to overcome them.",
+        "I’ve benefited from working hard, so there’s no reason others can’t.",
+        "If you’re smart and strong enough, discrimination won’t hold you back.",
+        "A person’s success in life is determined more by his or her personal efforts than by society.",
+        "Anyone who is willing to work hard can be successful in America."],
+      "negative": []
+    },
+    "Government Interference": {
+      "positive": ["A problem with government social programs is that they get in the way of personal freedom.",
+        "The government is inefficient, and therefore should not interfere in the private sector.",
+        "The government often hurts individual ambition when it interferes.",
+        "The government does not have a right to take what I earn and give it to someone else.",
+        "Social programs sponsored by the government provide false incentives and unearned rewards."],
+      "negative": ["It's right for the government to get involved in individuals' lives."]
+    }
+  }
+}

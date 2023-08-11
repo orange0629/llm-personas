@@ -1,0 +1,58 @@
+{
+  "class": "situation",
+  "value_key": {
+    "Avoid_Harm": {
+      "positive": ["someone cared for someone weak or vulnerable"],
+      "negative": [
+        "someone suffered emotionally",
+        "someone was cruel"
+      ]
+    },
+    "Fairness": {
+      "positive": [
+      ],
+      "negative": [
+        "some people were treated differently from others",
+        "someone acted unfairly",
+        "someone was denied his or her rights"
+      ]
+    },
+    "Ingroup": {
+      "positive": [
+        "someone’s action showed love for his or her country"
+      ],
+      "negative": [
+        "someone did something to betray his or her group",
+        "someone showed a lack of loyalty"
+      ]
+    },
+    "Authority": {
+      "positive": ["someone conformed to the traditions of society"],
+      "negative": [
+        "someone showed a lack of respect for authority",
+        "an action caused chaos or disorder"]
+    },
+    "Purity": {
+      "positive": ["someone acted in a way that God wants"],
+      "negative": ["someone violated standards of purity and decency",
+      "someone did something disgusting"]
+    }
+  },
+  "original_prompts": {
+    "EMOTIONALLY": {"positive": ["someone suffered emotionally"], "negative": []},
+    "WEAK": {"positive": ["someone cared for someone weak or vulnerable"], "negative": []},
+    "CRUEL": {"positive": ["someone was cruel"], "negative": []},
+    "TREATED": {"positive": ["some people were treated differently from others"], "negative": []},
+    "UNFAIRLY": {"positive": ["someone acted unfairly"], "negative": []},
+    "RIGHTS": {"positive": ["someone was denied his or her rights"], "negative": []},
+    "LOVECOUNTRY": {"positive": ["someone’s action showed love for his or her country"], "negative": []},
+    "BETRAY": {"positive": ["someone did something to betray his or her group"], "negative": []},
+    "LOYALTY": {"positive": ["someone showed a lack of loyalty"], "negative": []},
+    "RESPECT": {"positive": ["someone showed a lack of respect for authority"], "negative": []},
+    "TRADITIONS": {"positive": ["someone conformed to the traditions of society"], "negative": []},
+    "CHAOS": {"positive": ["an action caused chaos or disorder"], "negative": []},
+    "DECENCY": {"positive": ["someone violated standards of purity and decency"], "negative": []},
+    "DISGUSTING": {"positive": ["someone did something disgusting"], "negative": []},
+    "GOD": {"positive": ["someone acted in a way that God wants"], "negative": []}
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Family": {"positive": ["one's actions reflect on their family",
+      "doing the right things represents one's family well",
+      "one's wrongdoings bring shame to one's family",
+      "careful decisions about one's behavior reflect well on one's family",
+      "doing well means one's family has done well also",
+      "one's failures reflect badly on one's family",
+      "children should not embarrass their family"
+    ], "negative": []},
+    "Prosocial": {"positive": [
+      "people should refer to parents, elders, teachers, and other authority figures for decisions and opinions",
+      "one should cooperate with others as much as possible",
+      "showing sympathy to others is a virtue",
+      "having collaborative relationships is beneficial to the welfare of a group",
+      "one should always try to present a positive image of oneself",
+      "one should always try to present a positive image of one's family",
+      "one should always do their best to make one's family proud"
+    ], "negative": []},
+    "Harmony": {"positive": ["one should not get into arguments with others, even if they disagree",
+        "one should let other people win to avoid conflict",
+        "one should hide one's true feelings to get along with others"], "negative": []},
+    "Saving Face": {"positive": ["it is humiliating to when one's family members get criticized",
+        "one should be concerned about what other people think",
+        "one should be concerned about what other people think of one's family",
+      "one should do their best to make others look good in front of peers and superiors"], "negative": []}
+  },
+  "original_prompts": {
+    "Family": {
+      "positive": ["My actions reflect on my family.",
+        "I try to do the right things to represent my family well.",
+        "My wrongdoings will bring shame on my family.",
+        "I make careful decisions about my behavior so that I do not give my family a bad name.",
+        "If I do well (e.g., in school or career), it means my family has done well also.",
+        "I feel guilty that my failures might reflect on my family.",
+        "Children should not embarrass their family."],
+      "negative": []
+    },
+    "Prosocial": {
+      "positive": ["People should refer to parents, elders, teachers, and other authority figures for decisions and opinions.",
+        "I cooperate with others as much as possible.",
+        "Showing sympathy to others is a virtue.",
+        "Having collaborative relationships is beneficial to the welfare of a group.",
+        "I always try to present a positive image of myself.",
+        "I always try to present a positive image of my family.",
+        "I always do my best so that my family feels proud."],
+      "negative": []
+    },
+    "Harmony": {
+      "positive": ["I do not get into arguments with others even though I disagree with them.",
+        "In times of conflict, I let other people win because I do not want to disagree with them.",
+        "I hide my true feelings to get along with others."],
+      "negative": []
+    },
+    "Saving Face": {
+      "positive": ["It is humiliating to me when my family members get criticized.",
+        "I am concerned about what other people think of me.",
+        "I am concerned about what other people think of my family.",
+      "I do my best to make others look good in front of their peers and superiors."],
+      "negative": []
+    }
+  }
+}

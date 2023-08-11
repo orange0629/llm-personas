@@ -1,0 +1,42 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "SSI": {
+      "positive": ["women can learn technical skills, but it doesn’t come as naturally as it does for most men",
+        "if one person in a heterosexual marriage needs to quit working, it usually makes more sense for the husband to keep his job",
+        "most men naturally enjoy a tough and competitive career more than women do",
+        "women can learn how to be good leaders in the workplace, but it doesn’t come as naturally as it does for most men",
+        "it’s natural for a woman to be fulfilled by taking care of her children, but most men feel better when they have a good career, too",
+        "there are certain caregiving jobs, like nursing, that just naturally fit with women’s skills better than men’s skills",
+        "most kids are better off if their dad is the primary provider for the whole family",
+        "when it comes to making tough business decisions, men tend to have special abilities that most women don’t have"],
+      "negative": [
+        "children with single parents can be just as well off as children with both a mom and a dad",
+        "when a married couple divorces, judges shouldn’t assume that the mother is the more 'natural' parent",
+        "if we got rid of stereotyping and discrimination, differences between men and women would mostly disappear",
+        "it’s just as important to most women as it is to men to have a successful career"
+      ]
+    }
+  },
+  "original_prompts": {
+    "SSI": {
+      "positive": ["Women can learn technical skills, but it doesn’t come as naturally as it does for most men.",
+        "If one person in a heterosexual marriage needs to quit working, it usually makes more sense for the husband to keep his job.",
+        "When it comes to voting for president, I’m more comfortable trusting a man to make tough political decisions than a woman.",
+        "Most men naturally enjoy a tough and competitive career more than women do.",
+        "I would feel more comfortable if my auto mechanic was a man, rather than a woman.",
+        "Women can learn how to be good leaders in the workplace, but it doesn’t come as naturally as it does for most men.",
+        "It’s natural for a woman to be fulfilled by taking care of her children, but most men feel better when they have a good career, too.",
+        "There are certain caregiving jobs, like nursing, that just naturally fit with women’s skills better than men’s skills.",
+        "Most kids are better off if their dad is the primary provider for the whole family.",
+        "When it comes to making tough business decisions, men tend to have special abilities that most women don’t have."],
+      "negative": [
+        "Children with single parents can be just as well off as children with both a mom and a dad.",
+        "When a married couple divorces, judges shouldn’t assume that the mother is the more 'natural' parent.",
+        "If we got rid of stereotyping and discrimination, differences between men and women would mostly disappear.",
+        "I would feel equally comfortable with a repair-man or a repair-woman to fix something in my house.",
+        "It’s just as important to most women as it is to men to have a successful career."
+      ]
+    }
+  }
+}

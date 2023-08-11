@@ -1,0 +1,106 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Self-Restraint": {
+      "positive": ["it’s important to demonstrate self-control in the face of temptation",
+        "exercising self-discipline is an important way to feel like a decent person",
+        "life is full of unhealthy attractions, so it’s necessary to develop a strong sense of self-discipline and control",
+        "it’s important to avoid overindulging when it comes to life’s pleasures"],
+      "negative": []
+    },
+    "Industriousness": {
+      "positive": ["hard work and personal commitment is important to making decisions in life",
+        "it’s important to take responsibility for failures and setbacks rather than blame other people",
+        "it’s important to try to provide for oneself"],
+      "negative": []
+    },
+    "Not Harming": {
+      "positive": [
+        "a fundamental rule to live by is 'do not cause harm'",
+        "people should never steal from others",
+        "it is always wrong to kill another human being",
+        "there is no excuse for taking advantage of others for one’s own gain"
+      ],
+      "negative": []
+    },
+    "Helping/Fairness": {
+      "positive": [
+        "when someone does someone a favor, they should return it",
+        "having compassion for someone who is suffering is an extremely admirable trait",
+        "treating others fairly is a clear sign of a good person",
+        "a decent person will go out of his or her way to help others"
+      ],
+      "negative": []
+    },
+    "Social Order": {
+      "positive": ["in a good society, there must be very little deviation from behaviors viewed as appropriate",
+        "it is harmful to society when people choose radically new lifestyles and ways of living",
+        "there are good reasons why traditional ways of living have lasted for so long, even if people don’t fully understand those reasons",
+        "in a decent society, people should strictly attend to the values and practices of the larger community",
+        "the best societies are usually the least permissive societies"],
+      "negative": []
+    },
+    "Social Justice": {
+      "positive": ["it is our responsibility, not just a matter of personal preference, to provide for groups worse off in society",
+        "giving to groups worse off in society does not make those groups too dependent on help",
+        "it is important for those who are better off to help provide resources for the most vulnerable members of society",
+        "increased economic equality is ultimately beneficial to everyone in society",
+        "in the healthiest societies, those at the top should feel responsible for improving the well wellbeing of those at the bottom"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Self-Restraint": {
+      "positive": ["It’s particularly important to me to demonstrate self-control in the face of temptation.",
+        "Exercising self-discipline is an important way for me to feel like a decent person.",
+        "It’s not always easy to avoid temptations, but for my own good I feel I really have to try my best.",
+        "Life is full of unhealthy attractions, so it’s necessary for me to develop a strong sense of self-discipline and control.",
+        "It’s important for me to avoid overindulging when it comes to life’s pleasures."],
+      "negative": []
+    },
+    "Industriousness": {
+      "positive": ["I consistently put the necessary time and effort into providing for my own well-being and success.",
+        "I value hard work and personal commitment when it comes to making decisions in my life.",
+        "When things get tough, I apply myself and work even harder to overcome difficulties.",
+        "I think it’s important to take responsibility for my failures and setbacks rather than blame other people.",
+        "Whether or not I have others to lean on, I think it’s important for me to try to provide for myself."],
+      "negative": []
+    },
+    "Not Harming": {
+      "positive": [
+        "A fundamental rule I live by is 'do not cause harm.'",
+        "I especially dislike people who cheat to get ahead.",
+        "We should never steal from other people.",
+        "It is always wrong to kill another human being.",
+        "There is no excuse for taking advantage of others for one’s own gain."
+      ],
+      "negative": []
+    },
+    "Helping/Fairness": {
+      "positive": [
+        "When someone does me a favor, I try particularly hard to return the favor.",
+        "Having compassion for someone who is suffering is an extremely admirable trait.",
+        "Treating others fairly is a clear sign of a good person.",
+        "A decent person will go out of his or her way to help others.",
+        "Being generous is an important part of who I am."
+      ],
+      "negative": []
+    },
+    "Social Order": {
+      "positive": ["In a good society, there must be very little deviation from behaviors viewed as appropriate.",
+        "It is harmful to society when people choose radically new lifestyles and ways of living.",
+        "There are good reasons why traditional ways of living have lasted for so long, even if people don’t fully understand those reasons.",
+        "In a decent society, people should strictly attend to the values and practices of the larger community.",
+        "The best societies are usually the least permissive societies."],
+      "negative": []
+    },
+    "Social Justice": {
+      "positive": ["It is our responsibility, not just a matter of personal preference, to provide for groups worse off in society.",
+        "Giving to groups worse off in society does not make those groups too dependent on help.",
+        "It is important for those who are better off to help provide resources for the most vulnerable members of society.",
+        "Increased economic equality is ultimately beneficial to everyone in society.",
+        "In the healthiest societies, those at the top should feel responsible for improving the well wellbeing of those at the bottom."],
+      "negative": []
+    }
+  }
+}

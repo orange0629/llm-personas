@@ -1,0 +1,20 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Diversity": {"positive": [
+      "a society that is diverse functions better than one that is not diverse",
+      "a society with a high degree of cultural diversity is better able to tackle new problems",
+      "countries that are ethnically diverse have an advantage when it comes to achieving progress",
+      "an ethnically diverse society can overcome future challenges better than a society that is not ethnically diverse"
+    ], "negative": []}
+  },
+  "original_prompts": {
+    "Diversity": {"positive": [
+      "A society that is diverse functions better than one that is not diverse.",
+      "A society with a high degree of cultural diversity is better able to tackle new problems.",
+      "I value cultural diversity in Germany because it benefits the country.",
+      "Countries that are ethnically diverse have an advantage when it comes to achieving progress.",
+      "An ethnically diverse society can overcome future challenges better than a society that is not ethnically diverse."
+    ], "negative": []}
+  }
+}

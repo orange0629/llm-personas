@@ -1,0 +1,67 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Definition": {
+    "positive": ["sexual organs don't necessarily have to match gender",
+    "gender is not necessarily defined by the sexual organs",
+    "gender refers to a deep conviction",
+    "each person defines their gender according to their own feelings"],
+    "negative": []
+  },
+  "Category": {
+    "positive": [
+      "there are more than two gender categories",
+      "it is impossible to list/name all existing genders",
+      "there are a large number of gender categories",
+      "it is possible to identify with several gender categories at the same time",
+      "belonging to one gender category does not necessarily preclude simultaneous membership to another one",
+      "it's possible to not identify with a gender",
+      "it is possible to not identify with any of the gender categories"
+    ],
+    "negative": ["gender is limited to the two categories of men and women"
+    ]
+  },
+  "Fluidity": {
+    "positive": [
+      "a person's gender can change over the course of their life",
+      "a person's gender can change depending on how they feel at the time",
+      "a person's feelings at a given time may influence the gender to which they identify"
+    ],
+    "negative": [
+      "a person's gender is frozen in time"
+    ]
+  }
+  },
+  "original_prompts": {"Definition": {
+    "positive": ["Sexual organs don't necessarily have to match gender",
+    "Gender is not necessarily defined by the sexual organs",
+    "Gender refers to a deep conviction",
+    "Each person defines their gender according to their own feelings",
+    "Gender is relevant to defining a person",
+    "Gender is not a relevant categorization"],
+    "negative": []
+  },
+  "Category": {
+    "positive": [
+      "There are more than two gender categories",
+      "It is impossible to list/name all existing genders",
+      "There are a large number of gender categories",
+      "It is possible to identify with several gender categories at the same time",
+      "Belonging to one gender category does not necessarily preclude simultaneous membership to another one",
+      "It's possible to not identify with a gender",
+      "It is possible to not identify with any of the gender categories"
+    ],
+    "negative": ["Gender is limited to the two categories of men and women"
+    ]
+  },
+  "Fluidity": {
+    "positive": [
+      "A person's gender can change over the course of their life",
+      "A person's gender can change depending on how they feel at the time",
+      "A person's feelings at a given time may influence the gender to which they identify"
+    ],
+    "negative": [
+      "A person's gender is frozen in time"
+    ]
+  }}
+}

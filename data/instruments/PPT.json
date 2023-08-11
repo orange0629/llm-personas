@@ -1,0 +1,49 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Conservative": {
+      "positive": ["the government is doing too many things better left to businesses and individuals",
+      "it's not the government's job to protect people from themselves",
+      "everyone has it in their own power to succeed",
+      "the obstacles that once made it harder for women than men to get ahead are now largely gone",
+      "people being too easily offended by things others say is a major problem in this country",
+      "white people do not benefit much or at all from advantages in society that Black people do not have",
+      "U.S. policies should try to keep it so America is the only military superpower"],
+      "negative": []
+    },
+    "Liberal": {
+      "positive": ["the government should do more to solve problems",
+      "the economic system in this country unfairly favors powerful interests",
+      "tax rates on large businesses and corporations should be raised",
+      "the federal minimum wage should be raised to $15 an hour",
+      "a lot more needs to be done to ensure equal rights for all Americans regardless of their racial or ethnic background",
+      "there are still significant obstacles that make it harder for women to get ahead than men",
+      "in foreign policy, the U.S. should take into account the interests of its allies even if it means making compromises with them",
+      "voting is a fundamental right for every adult U.S. citizen and should not be restricted in any way"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Conservative": {
+      "positive": ["The government is doing too many things better left to businesses and individuals.",
+      "It's not the government's job to protect people from themselves.",
+      "Everyone has it in their own power to succeed.",
+      "The obstacles that once made it harder for women than men to get ahead are now largely gone.",
+      "People being too easily offended by things others say is a major problem in this country.",
+      "White people do not benefit much or at all from advantages in society that Black people do not have.",
+      "U.S. policies should try to keep it so America is the only military superpower."],
+      "negative": []
+    },
+    "Liberal": {
+      "positive": ["The government should do more to solve problems.",
+      "The economic system in this country unfairly favors powerful interests.",
+      "Tax rates on large businesses and corporations should be raised.",
+      "The federal minimum wage should be raised to $15 an hour.",
+      "A lot more needs to be done to ensure equal rights for all Americans regardless of their racial or ethnic background.",
+      "There are still significant obstacles that make it harder for women to get ahead than men.",
+      "In foreign policy, the U.S. should take into account the interests of its allies even if it means making compromises with them.",
+      "Voting is a fundamental right for every adult U.S. citizen and should not be restricted in any way."],
+      "negative": []
+    }
+  }
+}

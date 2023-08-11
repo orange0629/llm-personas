@@ -1,0 +1,34 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "ProImmigration": {
+      "positive": ["this country should take more immigrants",
+        "it is good for the economy that people from other countries move here",
+        "immigrants should have the same right to social security as everyone else",
+        "everyone who wants to come to this country to live and work should be allowed to do so",
+        "immigrants adapt well to their new society",
+        "people should be happy to have immigrants as coworkers",
+        "people should accept immigrants as family members",
+        "people should accept immigrants in their neighborhood"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Pro-Immigration": {
+      "positive": ["Finland should take more immigrants.",
+        "It is good for the Finnish economy that people from other countries move to Finland.",
+        "Immigrants should have the same right to social security as Finns even if they are not Finnish citizens.",
+        "Everyone who wants to come to Finland to live and work should be allowed to do so.",
+        "Generally speaking, immigrants adapt well to the Finnish society.",
+        "I would be happy to have an immigrant as a coworker.",
+        "I would accept an immigrant as a family member.",
+        "I would accept immigrants in my neighbourhood."
+      ],
+      "negative": ["Migration of foreigners into Finland should be restricted as long as there is unemployment in Finland.",
+      "Immigrants take away jobs from native Finns.",
+      "The state and the municipalities use too much money to help immigrants.",
+      "Immigration poses a serious threat to our national originality.",
+      "Immigration policy should primarily favour christians instead of other religions."]
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "ReciprocationIdeology": {
+      "positive": ["if someone does something for you, you should do something of greater value for them",
+        "if someone does you a favor, you should do even more in return",
+        "if someone goes out of their way to help you, you should do more than merely return the favor",
+        "if a person does you a favor, it's a good idea to repay that person with a greater favor",
+        "as a rule, don't accept a favor you can't return",
+        "if you frequent a certain restaurant, you should leave large tips to ensure good service",
+        "if someone returned a wallet you lost, you should try to do something in order to repay them",
+        "the most realistic policy is to take more from others than you give",
+        "it generally pays to let others do more for you than you do for them",
+        "in the long run, it's better to accept favors than to do favors for others",
+        "you shouldn't offer to help someone if they don't ask for your help",
+        "you should help others so that later they'll help you",
+        "you should not bend over backwards to help another person",
+        "I feel used when people ask favors of me",
+        "asking for someone's help gives them power over your life",
+        "you seldom benefit from giving a lot in a relationship with others",
+        "how much you do for someone should depend on how well that person treats you",
+        "it's not good to be in another person's debt"],
+      "negative": [
+        "it's not necessary to return favors quickly",
+        "if a stranger helped you start your stalled car, you should not feel obligated to return the favor",
+        "you should help others without expecting something in return",
+        "people will do a lot for you, even if you do little or nothing in return",
+        "your behavior towards other people should be unaffected by their behavior towards you"
+      ]
+    }
+  },
+  "original_prompts": {
+    "Reciprocation Ideology": {
+      "positive": ["If someone does something for you, you should do something of greater value for them.",
+        "If someone does you a favor, you should do even more in return.",
+        "If someone goes out of their way to help me, I feel as though I should do more for them than merely return the favor.",
+        "If a person does you a favor, it's a good idea to repay that person with a greater favor.",
+        "As a rule, I don't accept a favor if I can't return the favor.",
+        "If you frequent a certain restaurant, you should leave large tips to ensure good service.",
+        "If someone returned a wallet you lost, you should try to do something in order to repay him/her.",
+        "The most realistic policy is to take more from others than you give.",
+        "It generally pays to let others do more for you than you do for them.",
+        "In the long run, it's better to accept favors than to do favors for others.",
+        "You shouldn't offer to help someone if they don't ask for your help.",
+        "You should help others so that later they'll help you.",
+        "You should not bend over backwards to help another person.",
+        "I feel used when people ask favors of me.",
+        "Asking for another's help gives them power over your life.",
+        "You seldom benefit from giving a lot in a relationship with others.",
+        "How much you do for someone should depend on how well that person treats you.",
+        "I don't like to be in another person's debt."],
+      "negative": [
+        "It's not necessary to return favors quickly.",
+        "If a stranger helped you start your stalled car, you would not feel obligated to return the favor.",
+        "You should help others without expecting something in return.",
+        "People will do a lot for you, even if you do little or nothing in return.",
+        "Your behavior towards other people should be unaffected by their behavior towards you."
+      ]
+    }
+  }
+}

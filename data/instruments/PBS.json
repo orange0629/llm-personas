@@ -1,0 +1,59 @@
+{
+  "class": "normative_statements",
+  "value_key": {
+    "Liberal": {
+      "positive": ["control of all corporations should be transferred to the government",
+      "there should be a ban on the sale of all firearms",
+        "all social and economic planning should be transferred to the government, rather than the free market",
+        "all forms of abortion, including late-term abortions (performed during later stages of pregnancy) should be allowed",
+        "the United States needs to drastically increase the number of Syrian refugees allowed into the country",
+        "all undocumented immigrants currently residing within the U.S. should have access to the same educational, health, and legal benefits given to American citizens"],
+    "negative": []},
+    "Conservative": {"positive": [
+      "all undocumented immigrants currently residing in the U.S. should be immediately deported to their home countries",
+      "abortion is the murder of a human being and should not be allowed",
+      "Syrian refugees should be prevented from entering the U.S.",
+      "all services provided by the government should be dismantled so they could be better provided by private companies",
+      "there should not be any restriction on Americans' abilities to acquire firearms",
+      "marriage can only be the union of one man and one woman"
+    ],
+    "negative": []},
+    "Moderate": {"positive": [
+      "the private sector and the government are each better at providing certain goods and services, and we need both",
+      "the free market generally works, but some government regulation is needed to ensure the economy functions properly",
+      "some government assistance and intervention is required to help people get college degrees",
+      "due to the possibility of errors in the judicial process, criminals sentenced to the death penalty should have the right to exhaust all appeals options",
+      "same-sex couples that cannot marry should be entitled to some benefits afforded to straight married couples",
+      "abortions should be allowed in rare cases where the mother's life is in danger, or the pregnancy was the result of rape"
+    ],"negative": []
+    }
+  },
+  "original_prompts": {
+    "Liberal": {
+      "positive": ["Control of all corporations should be transferred to the government.",
+      "There should be a ban on the sale of all firearms.",
+        "All social and economic planning should be transferred to the government, rather than the free market.",
+        "All forms of abortion, including late-term abortions (performed during later stages of pregnancy) should be allowed.",
+        "The United States needs to drastically increase the number of Syrian refugees allowed into the country.",
+        "All undocumented immigrants currently residing within the U.S. should have access to the same educational, health, and legal benefits given to American citizens."],
+    "negative": []},
+    "Conservative": {"positive": [
+      "All undocumented immigrants currently residing in the U.S. should be immediately deported to their home countries.",
+      "Abortion is the murder of a human being and should not be allowed.",
+      "Syrian refugees should be prevented from entering the U.S.",
+      "All services provided by the government should be dismantled so they could be better provided by private companies.",
+      "There should not be any restriction on Americans' abilities to acquire firearms.",
+      "Marriage can only be the union of one man and one woman. "
+    ],
+    "negative": []},
+    "Moderate": {"positive": [
+      "The private sector and the government are each better at providing certain goods and services, and we need both.",
+      "The free market generally works, but some government regulation is needed to ensure the economy functions properly.",
+      "Some government assistance and intervention is required to help people get college degrees.",
+      "Due to the possibility of errors in the judicial process, criminals sentenced to the death penalty should have the right to exhaust all appeals options.",
+      "Same-sex couples that cannot marry should be entitled to some benefits afforded to straight married couples.",
+      "Abortions should be allowed in rare cases where the mother's life is in danger, or the pregnancy was the result of rape."
+    ],"negative": []
+    }
+  }
+}

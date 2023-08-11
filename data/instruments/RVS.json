@@ -1,0 +1,89 @@
+{
+    "class":  "value_noun",
+    "value_key": {
+        "PERSONAL_FREEDOM": {
+            "positive": ["freedom",
+                "a world at peace",
+                "self-respect",
+                "national security"],
+            "negative": []
+        },
+        "HUMANITARIANISM": {
+            "positive": ["humanitarianism",
+                "equality",
+                "a world of beauty",
+                "family security"],
+            "negative": []
+        },
+        "ACCOMPLISHMENT": {
+            "positive": ["a sense of accomplishment", "wisdom", "people having comfortable lives"],
+            "negative": []
+        },
+        "TRUE_FRIENDSHIP": {
+            "positive": ["mature love",
+                "true friendship",
+                "happiness",
+                "people having exciting lives"],
+            "negative": []
+        },
+        "MORAL_OBLIGATION": {
+            "positive": ["salvation"],
+            "negative": []
+        },
+        "UNDERSTANDING": {
+            "positive": [],
+            "negative": []
+        },
+        "CONTENTMENT": {
+            "positive": ["pleasure"],
+            "negative": []
+        },
+        "SOCIAL_RECOGNITION": {
+            "positive": ["social recognition"],
+            "negative": []
+        }
+    },
+    "original_prompts": {
+        "PERSONAL_FREEDOM": {
+            "positive": ["Freedom",
+                "A world at peace",
+                "Self-respect",
+                "National security"],
+            "negative": []
+        },
+        "HUMANITARIANISM": {
+            "positive": ["Inner harmony",
+                "Equality",
+                "A world of beauty",
+                "Family security"],
+            "negative": []
+        },
+        "ACCOMPLISHMENT": {
+            "positive": ["A sense of accomplishment", "Wisdom", "A comfortable life"],
+            "negative": []
+        },
+        "TRUE_FRIENDSHIP": {
+            "positive": ["Mature love",
+                "True friendship",
+                "Happiness",
+                "An exciting life"],
+            "negative": []
+        },
+        "MORAL_OBLIGATION": {
+            "positive": ["Salvation"],
+            "negative": []
+        },
+        "UNDERSTANDING": {
+            "positive": [],
+            "negative": []
+        },
+        "CONTENTMENT": {
+            "positive": ["Pleasure"],
+            "negative": []
+        },
+        "SOCIAL_RECOGNITION": {
+            "positive": ["Social recognition"],
+            "negative": []
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{"class": "belief_statements",
+  "value_key": {
+    "Conspiracism": {
+      "positive": [
+        "the pharmaceutical industry keeps a natural cure for cancer secret, because they earn more money on dubious treatments",
+        "the financial crisis was coordinated by a small elite within the financial business",
+        "air traffic is used to spread harmful chemical substances (chemtrails) in the sky as part of a secret program",
+        "a secret group uses popular music to brainwash young people",
+        "producers of cellular phones and the health authorities conceal the harmful effects of radiation from cellular phones",
+        "beliefs that climate change has human causes have been created to justify increased state control and is supported by scientists who want to make money"
+      ],
+      "negative": [
+        "the death of princess Diana was an accident",
+        "the attacks on 9/11 were neither planned nor known in advance by American authorities",
+        "the murder of John F. Kennedy was planned and executed by Lee Harvey Oswald, acting alone",
+        "there is no secret world conspiracy named Illuminati",
+        "the HIV virus evolved naturally, and was not created artificially in laboratories"
+      ]
+    }
+  },
+  "original_prompts": {
+    "Conspiracism": {
+      "positive": [
+        "The pharmaceutical industry keeps a natural cure for cancer secret, because they earn more money on dubious treatments.",
+        "The financial crisis was coordinated by a small elite within the financial business.",
+        "Anders Behring Breivik was part of a larger conspiracy controlled by outside forces.",
+        "Air traffic is used to spread harmful chemical substances (\"chemtrails\") in the sky as part of a secret program.",
+        "The Norwegian Institute for Public Health keeps secret information that the Norwegian vaccination program is hazardous to your health.",
+        "A secret group uses popular music to brainwash young people.",
+        "The Labor party actively seeks to destroy the nuclear family and make Norway subservient to foreign powers.",
+        "Producers of cellular phones and the health authorities conceal the harmful effects of radiation from cellular phones.",
+        "Beliefs that climate change has human causes have been created to justify increased state control and is supported by scientists who want to make money."
+      ],
+      "negative": [
+        "The death of princess Diana was an accident.",
+        "The attacks on World Trade Center and Pentagon on September 11, 2001 were neither planned nor known in advance by American authorities.",
+        "The murder of John F. Kennedy in 1963 was planned and executed by Lee Harvey Oswald, acting alone.",
+        "There is no secret world conspiracy named Illuminati.",
+        "The HIV-virus evolved naturally, and was not created artificially in laboratories."
+      ]
+    }
+  }
+}

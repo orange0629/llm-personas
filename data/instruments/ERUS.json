@@ -1,0 +1,22 @@
+{
+  "class": "situation",
+  "value_key": {
+    "LikeFairness": {
+    "positive": ["people never earning a reputation they don't deserve",
+      "people being treated fairly",
+      "the world being fair",
+      "people never getting things they're not entitled to have"],
+    "negative": ["someone's efforts going unnoticed",
+      "unfair things happening to people"]}
+  },
+  "original_prompts": {
+    "Responsiveness to Unfairness": {
+      "positive": ["It's a shame when people earn reputations they don't deserve.",
+      "I can't stand to hear stories in which people are treated unfairly.",
+      "I get really frustrated when the world seems unfair.",
+      "It really troubles me when people get things they're not entitled to have."],
+      "negative": ["I'm not bothered when people's efforts go unnoticed.",
+      "I'm not that bothered when unfair things happen to people."]
+    }
+  }
+}

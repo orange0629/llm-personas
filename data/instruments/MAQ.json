@@ -1,0 +1,55 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Reputation": {
+      "positive": ["a real man can handle himself in a fight",
+        "a real man makes his enemies afraid of him",
+        "a real man has children by many different women",
+        "a real man carries a lot of cash in his pocket and shows it off",
+        "a real man puts his male friends (bros) before his girlfriends",
+        "a real man has sex with a lot of different women",
+        "a real man shows off expensive jewelry",
+        "a real man has a reputation as a ladies’ man",
+        "a real man has a reputation as a tough guy"],
+      "negative": []
+    },
+    "Respect": {
+      "positive": ["a real man has a good paying job",
+        "a real man works to get a good education",
+        "a real man gets married or has a committed relationship with one woman",
+        "a real man spends a lot of time with his children",
+        "a real man provides for his children",
+        "a real man works hard to get ahead",
+        "a real man is a religious person",
+        "a real man obeys the law",
+        "a real man has a good job"],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+    "Reputation": {
+      "positive": ["A real man can handle himself in a fight.",
+        "A real man makes his enemies afraid of him.",
+        "A real man has children by many different women.",
+        "A real man carries a lot of cash in his pocket and shows it off.",
+        "A real man puts his male friends (bros) before his girlfriends.",
+        "A real man has sex with a lot of different women.",
+        "A real man shows off expensive jewelry.",
+        "A real man has a reputation as a ladies’ man.",
+        "A real man has a reputation as a tough guy."],
+      "negative": []
+    },
+    "Respect": {
+      "positive": ["A real man has a good paying job.",
+        "A real man works to get a good education.",
+        "A real man gets married or has a committed relationship with one woman.",
+        "A real man spends a lot of time with his children.",
+        "A real man provides for his children.",
+        "A real man works hard to get ahead.",
+        "A real man is a religious person.",
+        "A real man obeys the law.",
+        "A real man has a good job."],
+      "negative": []
+    }
+  }
+}

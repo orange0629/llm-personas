@@ -1,0 +1,47 @@
+{
+  "class": "belief_statements",
+  "value_key": {
+    "Protestant Ethic": {
+      "positive": ["most people spend too much time in unprofitable amusements",
+        "society would have fewer problems if people had less leisure time",
+        "money acquired easily is usually spent unwisely",
+        "there are few satisfactions equal to the realization that one has done his best at a job",
+        "the most difficult college courses usually turn out to be the most rewarding",
+        "most people who don't succeed in life are just plain lazy",
+        "the self-made man is likely to be more ethical than the man born to wealth",
+        "any man who is able and willing to work hard has a good chance of succeeding",
+        "people who fail at a job have usually not tried hard enough",
+        "life would have very little meaning if we never had to suffer",
+        "hard work offers little guarantee of success",
+        "the credit card is a ticket to careless spending",
+        "life would be more meaningful if we had more leisure time",
+        "the man who can approach an unpleasant task with enthusiasm is the man who gets ahead",
+        "if one works hard enough he is likely to make a good life for himself",
+        "a distaste for hard work usually reflects a weakness of character"],
+      "negative": ["people should have more leisure time to spend in relaxation"]
+    }
+  },
+  "original_prompts": {
+    "Protestant Ethic": {
+      "positive": ["Most people spend too much time in unprofitable amusements.",
+        "Our society would have fewer problems if people had less leisure time.",
+        "Money acquired easily (e.g., through gambling or speculation) is usually spent unwisely.",
+        "There are few satisfactions equal to the realization that one has done his best at a job.",
+        "The most difficult college courses usually turn out to be the most rewarding.",
+        "Most people who don't succeed in life are just plain lazy.",
+        "The self-made man is likely to be more ethical than the man born to wealth.",
+        "I often feel I would be more successful if I sacrificed certain pleasures.",
+        "Any man who is able and willing to work hard has a good chance of succeeding.",
+        "People who fail at a job have usually not tried hard enough.",
+        "Life would have very little meaning if we never had to suffer.",
+        "Hard work offers little guarantee of success.",
+        "The credit card is a ticket to careless spending.",
+        "Life would be more meaningful if we had more leisure time.",
+        "The man who can approach an unpleasant task with enthusiasm is the man who gets ahead.",
+        "If one works hard enough he is likely to make a good life for himself.",
+        "I feel uneasy when there is little work for me to do.",
+        "A distaste for hard work usually reflects a weakness of character."],
+      "negative": ["People should have more leisure time to spend in relaxation."]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "class": "mbti",
+  "value_key": {
+    "Extrovert": {
+      "positive": [
+        "expend energy and enjoy groups",
+        "more outgoing and think out loud",
+        "seek many public activities and interaction with others",
+        "external, communicative, express yourself",
+        "active, initiate"
+      ],
+      "negative": []
+    },
+    "Introvert": {
+      "positive": [
+        "conserve energy and enjoy one-on-one",
+        "more reserved and think to yourself",
+        "seek private, solitary activities with quiet to concentrate",
+        "internal, reticent, keep to yourself",
+        "reflective, deliberate"
+      ],
+      "negative": []
+    },
+    "Sensing": {
+      "positive": [
+        "interpret literally",
+        "practical, realistic, experiential",
+        "standard, usual, conventional",
+        "focus on here-and-now",
+        "facts, things, “what is”"
+      ],
+      "negative": [
+      ]
+    },
+    "Intuitive": {
+      "positive": [
+        "look for meaning and possibilities",
+        "imaginative, innovative, theoretical",
+        "different, novel, unique",
+        "look to the future, global perspective, “big picture”",
+        "ideas, dreams, “what could be,” philosophical"
+      ],
+      "negative": [
+      ]
+    },
+    "Judging": {
+      "positive": ["logical, thinking, questioning",
+        "candid, straight forward, frank",
+        "firm, tend to criticize, hold the line",
+        "tough-minded, just",
+        "matter of fact, issue-oriented"
+      ],
+      "negative": [
+      ]
+    },
+    "Perceiving": {
+      "positive": ["empathetic, feeling, accommodating",
+      "tactful, kind, encouraging",
+      "gentle, tend to appreciate, conciliate",
+      "tender-hearted, merciful",
+      "sensitive, people-oriented, compassionate"],
+      "negative": [
+      ]
+    },
+    "Thinking": {
+      "positive": ["organized, orderly",
+        "plan, schedule",
+        "regulated, structured",
+        "preparation, plan ahead",
+        "control, govern"
+      ],
+      "negative": []
+    },
+    "Feeling": {
+      "positive": ["flexible, adaptable",
+        "unplanned, spontaneous",
+        "easygoing, “live” and “let live”",
+        "go with the flow, adapt as you go",
+        "latitude, freedom"
+      ],
+      "negative": []
+    }
+  },
+  "original_prompts": {
+  }
+}

@@ -6,7 +6,9 @@ import pandas as pd
 import numpy as np
 from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer
 
-from accelerate import init_empty_weights, load_checkpoint_and_dispatch  # somewhat experimental
+from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
+
+project_path_base = "F:/david/llm-personas"
 
 CAUSAL = False
 causal_models = ["bigscience/bloom-1b1",
@@ -81,6 +83,7 @@ def evaluate_with_prompts_causal(batched_instances, adj_list, word_ids, model, t
                                  pos_options, neg_options, SEQ2SEQ=False):
     probs = {}
     if SEQ2SEQ:
+        # a vocab dictionary word:id
         target_dict = {tokenizer.decode(i[0]): i[0] for i in word_ids}
     else:
         target_dict = {tokenizer.decode(i): i for i in word_ids if ((type(i) == int) or (len(i) == 1))}  # ONLY next token
@@ -91,6 +94,7 @@ def evaluate_with_prompts_causal(batched_instances, adj_list, word_ids, model, t
         num_beams = NUM_BEAMS
     num_return_sequences = NUM_SEQS
 
+    # generate the next tokens based on prompts
     for b in tqdm(batched_instances):
         with torch.no_grad():
 
@@ -109,9 +113,13 @@ def evaluate_with_prompts_causal(batched_instances, adj_list, word_ids, model, t
                                        )
             #print(generated)
 
+        # calculate the probability
         for instance in range(len(b)):  # iterate through instances
             prompt = b[instance]
             next_token_logits = generated.scores[0][instance]
+
+            ## add softmax here (By Bangzhao)
+            next_token_logits = softmax(next_token_logits)
             if LONGER_SEQS:
                 top_probs = {tokenizer.decode(seq, skip_special_tokens=True): score
                              for seq,score in zip(generated['sequences'], generated['sequences_scores'])}
@@ -121,12 +129,14 @@ def evaluate_with_prompts_causal(batched_instances, adj_list, word_ids, model, t
                 for id in ids:
                     top_probs[tokenizer.decode(id)] = float(next_token_logits[id].cpu().numpy())
                 for tok, id in target_dict.items():
+                    # get the probability of the next token id
                     prob = next_token_logits[id]
                     if "\n" in tok:
                         top_probs[tok.replace("\n", "\\n")] = float(prob.cpu().numpy())
                     else:
                         top_probs[tok] = float(prob.cpu().numpy())
 
+            # make the probability binary
             if prompt in prompt_to_options.keys():
                 # adj1, adj2 = prompt_to_options[prompt]
                 # note: had bug before...
@@ -150,16 +160,20 @@ def score_masked_reg():
 def score_masked(b, instance, mask_token_logits, neg_options, pos_options, tokens_of_interest, target_ids):
     prompt = b[instance]
     # context: the mask_token_logits tensor is scores pre-softmax
+
     # mask_token_probs_soft = softmax(mask_token_logits)
+
+    # use softmax to make them probability
+    mask_token_logits = softmax(mask_token_logits)
     mask_token_logits_target = mask_token_logits[:, :, target_ids]
     # NOTE: NOW USING ABSOLUTE DIFFERENCE. taking top 50
-    ids = mask_token_logits.topk(k=50).indices
-    print("DEBUG" + str(ids))
+    ids = mask_token_logits.topk(k=50).indices.reshape(-1)
+    #print("DEBUG" + str(ids))
     top_probs = {}
     for id in ids:
-        top_probs[tokenizer.decode(id)] = float(mask_token_logits[id].numpy())
+        top_probs[tokenizer.decode(id)] = float(mask_token_logits.squeeze()[id].numpy())
     for id in target_ids:
-        top_probs[tokenizer.decode(id)] = float(mask_token_logits[id].numpy())
+        top_probs[tokenizer.decode(id)] = float(mask_token_logits.squeeze()[id].numpy())
 
     if NORM_SCORE:
         rel_probs = mask_token_logits_target[instance, instance]
@@ -222,7 +236,7 @@ def evaluate_with_prompts_masked(model, batched_instances, tokens_of_interest, p
         seq_idx += 1  # need for counting w/r/t batches!
         # most_likely_50_list += most_likely_50_batch
 
-    return probs#, most_likely_50_list
+    return probs #, most_likely_50_list
 
 
 if __name__ == "__main__":
@@ -245,6 +259,9 @@ if __name__ == "__main__":
 
     if args.scale is None:
         print("No scale given!")
+    # what I add (By Bangzhao)
+    else:
+        SCALE_LIST = [args.scale]
 
     CAUSAL = args.causal
     NORM_SCORE = args.normscore
@@ -262,9 +279,12 @@ if __name__ == "__main__":
     NUM_BEAMS = args.num_beams
     NUM_SEQS = args.num_returned_seqs
 
-    formatted_results_path_base = "/shared/3/projects/laviniad/ideologyprobes/prompts/results/bymodel/"
+    #formatted_results_path_base = "/shared/3/projects/laviniad/ideologyprobes/prompts/results/bymodel/"
+    formatted_results_path_base = project_path_base + "/result/"
 
-    templates_path = "/home/laviniad/projects/LAMPS/src/probes/prompt_data/templates.json"
+    #templates_path = "/home/laviniad/projects/LAMPS/src/probes/prompt_data/templates.json"
+    templates_path = project_path_base + "/data/templates.json"
+
     if args.d is None:
         DEVICE = 0
     else:
@@ -321,7 +341,8 @@ if __name__ == "__main__":
     counter = 1
     for axis in SCALE_LIST:
         print("on instrument " + str(counter) + " of " + str(len(SCALE_LIST)))
-        prompt_path = "/home/laviniad/projects/LAMPS/src/probes/prompt_data/fuzzed_surveys/" + axis + ".json"
+        #prompt_path = "/home/laviniad/projects/LAMPS/src/probes/prompt_data/fuzzed_surveys/" + axis + ".json"
+        prompt_path = project_path_base + "/data/paraphrased-prompts/" + axis + ".json"
         t_prompt_text, j_prompt_text, prompt_to_topics, prompt_to_person, prompt_to_template, prompt_to_options, prompt_to_class = load_prompts(
             prompt_path)
 
@@ -384,12 +405,13 @@ if __name__ == "__main__":
             curr_j_pos_options = j_pos_options
             curr_j_neg_options = j_neg_options
 
-            truth_probs = evaluate_with_prompts_masked(model, truth_batched_instances, truth_tokens_of_interest, curr_t_pos_options, curr_t_neg_options)
-            judgment_probs = evaluate_with_prompts_masked(model, judgment_batched_instances, judgment_tokens_of_interest, curr_j_pos_options, curr_j_neg_options)
+            truth_probs = evaluate_with_prompts_masked(model_obj, truth_batched_instances, truth_tokens_of_interest, curr_t_pos_options, curr_t_neg_options)
+            judgment_probs = evaluate_with_prompts_masked(model_obj, judgment_batched_instances, judgment_tokens_of_interest, curr_j_pos_options, curr_j_neg_options)
 
         probs = truth_probs
         probs.update(judgment_probs)
         temp = []
+        #adj_score_dict = {}
         for prompt, data in probs.items():
             adj_scores, top_probs = data["scores"], data["token_probs"]
             result_dict = {'instrument': axis, 'prompt': prompt}
@@ -397,6 +419,10 @@ if __name__ == "__main__":
                 result_dict["p(" + token + ")"] = prob
 
             temp.append(result_dict)
+        #     adj_score_dict[prompt] = adj_scores
+        # output_filename = "C:/Users/elain/Desktop/llm-personas-master/result/score_output.json"
+        # with open(output_filename, "w") as json_file:
+        #     json.dump(adj_score_dict, json_file, indent=4)
 
         model_record_df += temp
         counter += 1

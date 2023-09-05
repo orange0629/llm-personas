@@ -1,8 +1,8 @@
 TEMPLATE_PATH=$PROJECT_PATH"../../data/templates.json"
 BASE_PATH=$PROJECT_PATH"../../data/instruments/"
-PARAPHRASED_PATH=$PROJECT_PATH"/shared/4/projects/llm-personas/data/paraphrased-prompts/"
+PARAPHRASED_PATH=$PROJECT_PATH"../../data/paraphrased-prompts/"
 
-pattern="MBTI.json"
+pattern="ACI.json"
 for FILE in $BASE_PATH$pattern; do
   echo $FILE;
   bare=$(basename -- "$FILE");

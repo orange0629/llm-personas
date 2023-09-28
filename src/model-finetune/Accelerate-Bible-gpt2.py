@@ -1,7 +1,7 @@
 from accelerate import Accelerator
 from transformers import AdamW, AutoTokenizer, AutoModelForCausalLM, get_scheduler
 from torch.utils.data import DataLoader
-from datasets import load_dataset
+from datasets import load_dataset, Dataset
 from tqdm import tqdm
 import datasets
 import transformers
@@ -22,16 +22,21 @@ else:
 tokenizer = AutoTokenizer.from_pretrained("gpt2")
 tokenizer.pad_token = tokenizer.eos_token
 
-# Define the Tokenize function
-def tokenize_function(examples):
-    outputs = tokenizer(examples["text"], truncation=True, padding="max_length", max_length=256)
-    #outputs = tokenizer(examples["text"], return_tensors="pt", padding=True)
-    return outputs
 
-# Load the dataset and create a dataloader
-dataset = load_dataset("wikitext", "wikitext-2-raw-v1", split="train")
+f1 = open('bible_dataset/bible_clean_noline.txt')
+s = f1.read()
+f1.close()
 
-tokenized_dataset = dataset.map(tokenize_function, batched=True, remove_columns=["text"])
+tokened = tokenizer(s)
+new_dict = {'input_ids': [], 'attention_mask': []}
+for i in range(0, len(tokened['input_ids']), 512):
+    if(i + 512 >= len(tokened['input_ids'])):
+        break
+    new_dict['input_ids'].append(tokened['input_ids'][i:(i+512)])
+    new_dict['attention_mask'].append(tokened['attention_mask'][i:(i+512)])
+    #new_dict['labels'].append(tokened['input_ids'][(i+64):(i+128)])
+
+tokenized_dataset = Dataset.from_dict(new_dict)
 tokenized_dataset.set_format("torch")
 
 model = AutoModelForCausalLM.from_pretrained("gpt2")
@@ -46,7 +51,7 @@ dataloader, model, optimizer = accelerator.prepare(
     dataloader, model, optimizer
 )
 
-num_epochs = 3
+num_epochs = 5
 num_training_steps = num_epochs * len(dataloader)
 lr_scheduler = get_scheduler(
     "linear",
@@ -68,3 +73,8 @@ for epoch in range(num_epochs):
         lr_scheduler.step()
         optimizer.zero_grad()
         progress_bar.update(1)
+
+unwrapped_model = accelerator.unwrap_model(model)
+unwrapped_model.save_pretrained("/shared/2/projects/llm-personas/gpt2-bible")
+
+#model.save_pretrained("/shared/2/projects/llm-personas/gpt2-bible")

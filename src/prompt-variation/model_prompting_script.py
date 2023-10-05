@@ -5,7 +5,7 @@ from tqdm import tqdm
 import pandas as pd
 import numpy as np
 from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer
-
+from transformers import BartForConditionalGeneration
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
 
 project_path_base = "F:/david/llm-personas"
@@ -307,6 +307,8 @@ if __name__ == "__main__":
         if CAUSAL:
             if "t5" in model:
                 model_obj = (AutoModelForSeq2SeqLM.from_pretrained(model))#.to(DEVICE)
+            elif "bart" in model:
+                model_obj = (BartForConditionalGeneration.from_pretrained(model, device_map="auto"))
             else:
                 model_obj = (AutoModelForCausalLM.from_pretrained(model))#.to(DEVICE)
         else:

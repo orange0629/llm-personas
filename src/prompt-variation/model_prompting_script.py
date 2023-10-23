@@ -4,8 +4,7 @@ import argparse
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
-from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer
-from transformers import BartForConditionalGeneration
+from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
 
 project_path_base = "F:/david/llm-personas"
@@ -294,7 +293,7 @@ if __name__ == "__main__":
     else:
         BATCH_SIZE = args.BATCH
 
-    MAX_LENGTH = 50  # changed from 50 for debugging purposes
+    MAX_LENGTH = 200  # changed from 50 for debugging purposes
     MAX_NEW_TOKENS = 1
     softmax = torch.nn.Softmax(dim=-1)
     SEP_BY_AXIS = False
@@ -307,8 +306,8 @@ if __name__ == "__main__":
         if CAUSAL:
             if "t5" in model:
                 model_obj = (AutoModelForSeq2SeqLM.from_pretrained(model))#.to(DEVICE)
-            elif "bart" in model:
-                model_obj = (BartForConditionalGeneration.from_pretrained(model, device_map="auto"))
+            elif "llama" in model:
+                 model_obj = (LlamaForCausalLM.from_pretrained(model))
             else:
                 model_obj = (AutoModelForCausalLM.from_pretrained(model))#.to(DEVICE)
         else:
@@ -319,6 +318,8 @@ if __name__ == "__main__":
         with init_empty_weights():
             if "t5" in model:
                 model_obj = (AutoModelForSeq2SeqLM.from_config(config))
+            elif "llama" in model:
+                model_obj = (LlamaForCausalLM.from_pretrained(model))
             else:
                 model_obj = (AutoModelForCausalLM.from_config(config))
 
@@ -326,14 +327,23 @@ if __name__ == "__main__":
         model_obj = load_checkpoint_and_dispatch(
             model_obj, model, device_map="auto"
         )
-
-    tokenizer = AutoTokenizer.from_pretrained(model,
+    
+    if 'llama' in model:
+        tokenizer = LlamaTokenizer.from_pretrained('/home/bangzhao/projects/llm-personas/models/',
                                               truncation=True,
                                               padding=True,
                                               padding_side='left',
                                               max_length=512,
                                               model_max_length=512
                                               )
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(model,
+                                                  truncation=True,
+                                                  padding=True,
+                                                  padding_side='left',
+                                                  max_length=512,
+                                                  model_max_length=512
+                                                  )
 
     if not tokenizer.pad_token:
         tokenizer.pad_token = tokenizer.eos_token
@@ -344,7 +354,7 @@ if __name__ == "__main__":
     for axis in SCALE_LIST:
         print("on instrument " + str(counter) + " of " + str(len(SCALE_LIST)))
         #prompt_path = "/home/laviniad/projects/LAMPS/src/probes/prompt_data/fuzzed_surveys/" + axis + ".json"
-        prompt_path = project_path_base + "/data/paraphrased-prompts/" + axis + ".json"
+        prompt_path = project_path_base + "/data/paraphrased-prompts-modified/" + axis + ".json"
         t_prompt_text, j_prompt_text, prompt_to_topics, prompt_to_person, prompt_to_template, prompt_to_options, prompt_to_class = load_prompts(
             prompt_path)
 

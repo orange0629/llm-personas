@@ -4,8 +4,7 @@ import argparse
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
-from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer
-
+from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
 
 project_path_base = "F:/david/llm-personas"
@@ -99,19 +98,24 @@ def evaluate_with_prompts_causal(batched_instances, adj_list, word_ids, model, t
         with torch.no_grad():
 
             encoded = tokenizer(b, max_length=512, padding=True, truncation=True, return_tensors='pt').to(DEVICE)
-            generated = model.generate(encoded.input_ids,
-                                       pad_token_id=tokenizer.pad_token_id,
-                                       attention_mask=encoded.attention_mask,
-                                       #no_repeat_ngram_size=1,
-                                       return_dict_in_generate=True,
-                                       #num_beams=num_beams,
-                                       output_scores=True,
-                                       remove_invalid_values=True,
-                                       #num_return_sequences=num_return_sequences,
-                                       renormalize_logits=True,
-                                       max_length=MAX_LENGTH
-                                       )
-            #print(generated)
+            input_data = {
+                "input_ids": encoded.input_ids,
+                "attention_mask": encoded.attention_mask,
+            }
+
+            # Generate output
+            generated = model.generate(
+                **input_data,
+                pad_token_id=tokenizer.pad_token_id,
+                # no_repeat_ngram_size=1,
+                return_dict_in_generate=True,
+                # num_beams=num_beams,
+                output_scores=True,
+                remove_invalid_values=True,
+                # num_return_sequences=num_return_sequences,
+                renormalize_logits=True,
+                max_length=MAX_LENGTH
+            )
 
         # calculate the probability
         for instance in range(len(b)):  # iterate through instances
@@ -252,6 +256,7 @@ if __name__ == "__main__":
     parser.add_argument("--accelerate", help="use accelerate", action='store_true')
     parser.add_argument("--record_longer_seqs", help="store sequence scores (instead of just next token probabilities)", action='store_true')
     parser.add_argument("-num_beams", help="number of beams for beam search decoding", type=int, default=10)
+    parser.add_argument("--lora", help="whether load lora weights", action='store_true')
     parser.add_argument("-num_returned_seqs", help="number of returned sequences for beam search decoding", type=int, default=1)
 
     args = parser.parse_args()
@@ -269,6 +274,7 @@ if __name__ == "__main__":
     ADD_S_TOKEN = (not CAUSAL) and args.add_sentence_token
     ADD_PERIOD = (not CAUSAL) and args.add_period
     ACCELERATE = args.accelerate
+    LORA = args.lora
     LONGER_SEQS = args.record_longer_seqs
     print(args.model)
 
@@ -294,7 +300,7 @@ if __name__ == "__main__":
     else:
         BATCH_SIZE = args.BATCH
 
-    MAX_LENGTH = 50  # changed from 50 for debugging purposes
+    MAX_LENGTH = 200  # changed from 50 for debugging purposes
     MAX_NEW_TOKENS = 1
     softmax = torch.nn.Softmax(dim=-1)
     SEP_BY_AXIS = False
@@ -306,17 +312,27 @@ if __name__ == "__main__":
     if not ACCELERATE:
         if CAUSAL:
             if "t5" in model:
-                model_obj = (AutoModelForSeq2SeqLM.from_pretrained(model))#.to(DEVICE)
+                model_obj = (AutoModelForSeq2SeqLM.from_pretrained(model))
+            elif "llama" in model:
+                if LORA:
+                    model_obj = LlamaForCausalLM.from_pretrained('/shared/4/models/llama2/pytorch-versions/llama-2-7b/')
+                    peft_model_id = model
+                    config = PeftConfig.from_pretrained(peft_model_id)
+                    model_obj = PeftModel.from_pretrained(model_obj, peft_model_id)
+                else:
+                    model_obj = (LlamaForCausalLM.from_pretrained(model))
             else:
-                model_obj = (AutoModelForCausalLM.from_pretrained(model))#.to(DEVICE)
+                model_obj = (AutoModelForCausalLM.from_pretrained(model))
         else:
-            model_obj = (AutoModelForMaskedLM.from_pretrained(model))#.to(DEVICE)
+            model_obj = (AutoModelForMaskedLM.from_pretrained(model))
         model_obj.to(DEVICE)
     else:
         config = AutoConfig.from_pretrained(model)
         with init_empty_weights():
             if "t5" in model:
                 model_obj = (AutoModelForSeq2SeqLM.from_config(config))
+            elif "llama" in model:
+                model_obj = (LlamaForCausalLM.from_pretrained(model))
             else:
                 model_obj = (AutoModelForCausalLM.from_config(config))
 
@@ -325,13 +341,22 @@ if __name__ == "__main__":
             model_obj, model, device_map="auto"
         )
 
-    tokenizer = AutoTokenizer.from_pretrained(model,
-                                              truncation=True,
-                                              padding=True,
-                                              padding_side='left',
-                                              max_length=512,
-                                              model_max_length=512
-                                              )
+    if 'llama' in model:
+        tokenizer = LlamaTokenizer.from_pretrained('/shared/4/models/llama2/pytorch-versions/llama-2-7b/',
+                                                   truncation=True,
+                                                   padding=True,
+                                                   padding_side='left',
+                                                   max_length=512,
+                                                   model_max_length=512
+                                                   )
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(model,
+                                                  truncation=True,
+                                                  padding=True,
+                                                  padding_side='left',
+                                                  max_length=512,
+                                                  model_max_length=512
+                                                  )
 
     if not tokenizer.pad_token:
         tokenizer.pad_token = tokenizer.eos_token
@@ -342,7 +367,7 @@ if __name__ == "__main__":
     for axis in SCALE_LIST:
         print("on instrument " + str(counter) + " of " + str(len(SCALE_LIST)))
         #prompt_path = "/home/laviniad/projects/LAMPS/src/probes/prompt_data/fuzzed_surveys/" + axis + ".json"
-        prompt_path = project_path_base + "/data/paraphrased-prompts/" + axis + ".json"
+        prompt_path = project_path_base + "/data/paraphrased-prompts-modified/" + axis + ".json"
         t_prompt_text, j_prompt_text, prompt_to_topics, prompt_to_person, prompt_to_template, prompt_to_options, prompt_to_class = load_prompts(
             prompt_path)
 

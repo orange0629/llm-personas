@@ -7,7 +7,8 @@ import numpy as np
 from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
 
-project_path_base = "F:/david/llm-personas"
+#project_path_base = "../../"
+project_path_base = "/home/leczhang/research/llm-personas"
 
 CAUSAL = False
 causal_models = ["bigscience/bloom-1b1",
@@ -349,6 +350,14 @@ if __name__ == "__main__":
                                                    max_length=512,
                                                    model_max_length=512
                                                    )
+    elif 'bloomz-3b' in model:
+        tokenizer = AutoTokenizer.from_pretrained("bigscience/bloomz-3b",
+                                                  truncation=True,
+                                                  padding=True,
+                                                  padding_side='left',
+                                                  max_length=512,
+                                                  model_max_length=512
+                                                  )
     else:
         tokenizer = AutoTokenizer.from_pretrained(model,
                                                   truncation=True,
@@ -455,7 +464,7 @@ if __name__ == "__main__":
     model_record_df = pd.DataFrame(model_record_df)
 
     m = model.replace("/", "-")
-    formatted_prefix = formatted_results_path_base + m
+    formatted_prefix = formatted_results_path_base + args.scale + m
     if ADD_PERIOD:
         formatted_prefix += "_period"
     if LONGER_SEQS:

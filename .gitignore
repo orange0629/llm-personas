@@ -2,3 +2,5 @@
 *.txt
 __pycache__
 wandb
+result
+runs

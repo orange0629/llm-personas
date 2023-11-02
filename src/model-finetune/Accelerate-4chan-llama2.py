@@ -1,7 +1,7 @@
 from accelerate import Accelerator
 from transformers import AdamW, AutoTokenizer, AutoModelForCausalLM, get_scheduler
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM
-#from torch.utils.tensorboard import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 from torch.utils.data import DataLoader
 from datasets import load_dataset, Dataset
 from tqdm import tqdm
@@ -9,7 +9,7 @@ import datasets
 import transformers
 from personas_data import get_4chan_dataset, get_bible_dataset
 
-batch_size = 2
+batch_size = 4
 max_sentence_len = 512
 output_dir = "/shared/2/projects/llm-personas/llama2-4chan-linear/"
 
@@ -36,7 +36,7 @@ tokenized_dataset = get_4chan_dataset(tokenizer, max_sentence_len, need_labels=T
 dataloader = DataLoader(tokenized_dataset, batch_size=batch_size, shuffle=True)
 
 optimizer = AdamW(model.parameters(), lr=3e-5)
-#summary_writer = SummaryWriter()
+summary_writer = SummaryWriter()
 
 # Move the model to the device
 dataloader, model, optimizer = accelerator.prepare(
@@ -66,7 +66,7 @@ for epoch in range(num_epochs):
     for step, batch in enumerate(dataloader):
         outputs = model(input_ids=batch['input_ids'], labels=batch['input_ids'])
         loss = outputs.loss
-        #summary_writer.add_scalar('Loss', loss, (step + epoch * len(dataloader)) * batch_size * max_sentence_len)
+        summary_writer.add_scalar('Loss', loss, (step + epoch * len(dataloader)) * batch_size * max_sentence_len)
         accelerator.backward(loss)
     
         optimizer.step()

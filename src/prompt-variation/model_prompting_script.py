@@ -5,6 +5,7 @@ from tqdm import tqdm
 import pandas as pd
 import numpy as np
 from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM
+from peft import PeftModel, PeftConfig
 from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
 
 #project_path_base = "../../"

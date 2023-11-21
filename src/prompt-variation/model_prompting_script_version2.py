@@ -5,14 +5,28 @@ from tqdm import tqdm
 import pandas as pd
 from transformers import AutoConfig, AutoModelForSeq2SeqLM, AutoModelForCausalLM, AutoModelForMaskedLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM
 from peft import PeftModel, PeftConfig
+from accelerate import init_empty_weights, load_checkpoint_and_dispatch, infer_auto_device_map  # somewhat experimental
 
-project_path_base = "/home/bangzhao/projects/llm-personas/"
+project_path_base = "/home/leczhang/research/llm-personas"
 
 CAUSAL = True
 
-SCALE_LIST = ['OCEAN', 'MFT', 'RVS', 'SIBS', 'HCS', 'UAS', 'RCBS', 'ACI', 'EPQ', 'BSCTM',
-'BSSS', 'SBI', 'PDBS', 'BCQ', 'CCS', 'AIS', 'BRS', 'MHBS', 'ONBGS', 'IS', 'ERUS', 'PSNS',
-'MAS', 'ATPLS', 'FIS', 'MAQ', 'NBI', 'SSIS', 'MMMS', 'VES', 'DAI', 'UWS', 'PES', 'RIQ', 'TLS']
+#SCALE_LIST = ['OCEAN', 'MFT', 'RVS', 'SIBS', 'HCS', 'UAS', 'RCBS', 'ACI', 'EPQ', 'BSCTM',
+#'BSSS', 'SBI', 'PDBS', 'BCQ', 'CCS', 'AIS', 'BRS', 'MHBS', 'ONBGS', 'IS', 'ERUS', 'PSNS',
+#'MAS', 'ATPLS', 'FIS', 'MAQ', 'NBI', 'SSIS', 'MMMS', 'VES', 'DAI', 'UWS', 'PES', 'RIQ', 'TLS']
+
+SCALE_LIST = ['prompt_sensitivity/Truefalse_short-statement_double-bar-separated_colon-zero-space-ending_answer-asking', 
+              'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-double-space-ending_answer-asking',
+              'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-linebreak-ending_answer-asking',
+              'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-linebreak-ending_response-asking',
+              'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-single-space-ending_answer-asking',
+              'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-zero-space-ending_answer-asking',
+              'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_question-mark-linebreak-ending_answer-asking',
+              'prompt_sensitivity/Truefalse_short-statement_single-space-separated_colon-zero-space-ending_answer-asking',
+              'prompt_sensitivity/Truefalse_short-statement_triple-sharp-linebreak-separated_colon-linebreak-ending_answer-asking',
+              'all_truefalse_short_changeline',
+              'all_yesno_short_changeline'
+              ]
 
 seq2seq = ["t5-small", "t5-base", "google/flan-t5-small", "google/flan-t5-base", "google/flan-t5-large", "google/flan-t5-xl"]
 
@@ -111,10 +125,11 @@ def evaluate_with_prompts_causal(batched_instances, word_ids, model, tokenizer, 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-scale", help="scale name", default="sanity")
+    parser.add_argument("-scale", help="scale name", default=None)
     parser.add_argument("-d", help="device", type=int, default=0)
     parser.add_argument("-BATCH", help="device", type=int, default=1)
     parser.add_argument("-model", help="model to evaluate", type=str, default=None)
+    parser.add_argument("--accelerate", help="use accelerate", action='store_true')
     parser.add_argument("--record_longer_seqs", help="store sequence scores (instead of just next token probabilities)", action='store_true')
     parser.add_argument("-num_beams", help="number of beams for beam search decoding", type=int, default=10)
     parser.add_argument("--lora", help="whether load lora weights", action='store_true')
@@ -129,6 +144,7 @@ if __name__ == "__main__":
     else:
         SCALE_LIST = [args.scale]
 
+    ACCELERATE = args.accelerate
     LORA = args.lora
     LONGER_SEQS = args.record_longer_seqs
     print(args.model)
@@ -160,17 +176,45 @@ if __name__ == "__main__":
     model_record_df = []
 
     ## model init
-    if "t5" in model:
-        model_obj = (AutoModelForSeq2SeqLM.from_pretrained(model))
-    elif "llama" in model:
-        if LORA:
-            model_obj = LlamaForCausalLM.from_pretrained('/shared/4/models/llama2/pytorch-versions/llama-2-7b/')
-            peft_model_id = model
-            config = PeftConfig.from_pretrained(peft_model_id)
-            model_obj = PeftModel.from_pretrained(model_obj, peft_model_id)
+    if not ACCELERATE:
+        if "t5" in model:
+            model_obj = (AutoModelForSeq2SeqLM.from_pretrained(model))
+        elif "llama" in model:
+            if LORA:
+                model_obj = LlamaForCausalLM.from_pretrained('/shared/4/models/llama2/pytorch-versions/llama-2-7b/')
+                peft_model_id = model
+                config = PeftConfig.from_pretrained(peft_model_id)
+                model_obj = PeftModel.from_pretrained(model_obj, peft_model_id)
+            else:
+                model_obj = (LlamaForCausalLM.from_pretrained(model))
         else:
-            model_obj = (LlamaForCausalLM.from_pretrained(model))
+            model_obj = (AutoModelForCausalLM.from_pretrained(model))
+        model_obj.to(DEVICE)
+    
+    else:
+        '''
+        config = AutoConfig.from_pretrained(model)
+        with init_empty_weights():
+            if "t5" in model:
+                model_obj = (AutoModelForSeq2SeqLM.from_config(config))
+            #elif "llama" in model:
+            #    model_obj = (LlamaForCausalLM.from_config(config))
+            else:
+                model_obj = (AutoModelForCausalLM.from_config(config))
 
+        model_obj.tie_weights()
+        model_obj = load_checkpoint_and_dispatch(
+            model_obj, model, device_map="auto"
+        )
+        '''
+        if "t5" in model:
+            model_obj = AutoModelForSeq2SeqLM.from_pretrained(model, device_map='auto')
+        else:
+            model_obj = AutoModelForCausalLM.from_pretrained(model, 
+                                            #load_in_8bit=True, 
+                                            device_map='auto')
+
+    if 'llama' in model:
         tokenizer = LlamaTokenizer.from_pretrained('/shared/4/models/llama2/pytorch-versions/llama-2-7b/',
                                                    truncation=True,
                                                    padding=True,
@@ -179,7 +223,6 @@ if __name__ == "__main__":
                                                    model_max_length=512
                                                    )
     else:
-        model_obj = (AutoModelForCausalLM.from_pretrained(model))
         tokenizer = AutoTokenizer.from_pretrained(model,
                                                   truncation=True,
                                                   padding=True,
@@ -187,7 +230,6 @@ if __name__ == "__main__":
                                                   max_length=512,
                                                   model_max_length=512
                                                   )
-    model_obj.to(DEVICE)
 
     if not tokenizer.pad_token:
         tokenizer.pad_token = tokenizer.eos_token
@@ -196,6 +238,7 @@ if __name__ == "__main__":
 
     counter = 1
     for axis in SCALE_LIST:
+        model_record_df = []
         print("on instrument " + str(counter) + " of " + str(len(SCALE_LIST)))
 
         prompt_path = project_path_base + "/data/paraphrased-prompts-modified/" + axis + ".json"
@@ -258,14 +301,15 @@ if __name__ == "__main__":
         model_record_df += temp
         counter += 1
         print("got predictions")
-    model_record_df = pd.DataFrame(model_record_df)
 
-    m = model.replace("/", "-")
-    formatted_prefix = formatted_results_path_base + m
-    if LONGER_SEQS:
-        formatted_prefix += "_longerseqs"
-    formatted_prefix += ".csv"
+        model_record_df = pd.DataFrame(model_record_df)
 
-    model_record_df.to_csv(formatted_prefix)
+        m = model.replace("/", "-")
+        formatted_prefix = formatted_results_path_base + axis + "-" + m
+        if LONGER_SEQS:
+            formatted_prefix += "_longerseqs"
+        formatted_prefix += ".csv"
 
-    print("probabilities dumped")
+        model_record_df.to_csv(formatted_prefix)
+
+        print("probabilities dumped")

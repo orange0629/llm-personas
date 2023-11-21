@@ -2,8 +2,8 @@ from accelerate import Accelerator
 from transformers import AdamW, AutoModelForCausalLM, AutoTokenizer, LlamaTokenizer, LlamaForCausalLM, TrainingArguments
 import transformers
 from tqdm import tqdm
-from personas_data import get_4chan_dataset
-from utils import print_trainable_parameters
+from finetune_utils.utils import get_4chan_dataset
+from finetune_utils.utils import print_trainable_parameters
 import torch
 
 batch_size = 2

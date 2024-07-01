@@ -15,7 +15,9 @@ CAUSAL = True
 #'BSSS', 'SBI', 'PDBS', 'BCQ', 'CCS', 'AIS', 'BRS', 'MHBS', 'ONBGS', 'IS', 'ERUS', 'PSNS',
 #'MAS', 'ATPLS', 'FIS', 'MAQ', 'NBI', 'SSIS', 'MMMS', 'VES', 'DAI', 'UWS', 'PES', 'RIQ', 'TLS']
 
-SCALE_LIST = ['prompt_sensitivity/Truefalse_short-statement_double-bar-separated_colon-zero-space-ending_answer-asking', 
+SCALE_LIST = ['all_truefalse_short_changeline',
+              'all_yesno_short_changeline',
+              'prompt_sensitivity/Truefalse_short-statement_double-bar-separated_colon-zero-space-ending_answer-asking', 
               'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-double-space-ending_answer-asking',
               'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-linebreak-ending_answer-asking',
               'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-linebreak-ending_response-asking',
@@ -24,11 +26,7 @@ SCALE_LIST = ['prompt_sensitivity/Truefalse_short-statement_double-bar-separated
               'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_question-mark-linebreak-ending_answer-asking',
               'prompt_sensitivity/Truefalse_short-statement_single-space-separated_colon-zero-space-ending_answer-asking',
               'prompt_sensitivity/Truefalse_short-statement_triple-sharp-linebreak-separated_colon-linebreak-ending_answer-asking',
-              'all_truefalse_short_changeline',
-              'all_yesno_short_changeline'
-              ]
-
-SCALE_LIST = ['prompt_with_personas/abuse_all_truefalse_short_changeline',
+              'prompt_with_personas/abuse_all_truefalse_short_changeline',
               'prompt_with_personas/classism_all_truefalse_short_changeline',
               'prompt_with_personas/conspiracy_all_truefalse_short_changeline',
               'prompt_with_personas/control_all_truefalse_short_changeline',
@@ -37,45 +35,16 @@ SCALE_LIST = ['prompt_with_personas/abuse_all_truefalse_short_changeline',
               'prompt_with_personas/reciprocal_all_truefalse_short_changeline',
               'prompt_with_personas/societal_all_truefalse_short_changeline',
               'prompt_with_personas/spiritual_all_truefalse_short_changeline',
-              'prompt_with_personas/ssi_all_truefalse_short_changeline'
-              ]
-
-SCALE_LIST = ['prompt_with_personas_v3/extrovert-v1_all_truefalse_short_changeline',
-              'prompt_with_personas_v3/extrovert-v2_all_truefalse_short_changeline',
-              'prompt_with_personas_v3/normal_all_truefalse_short_changeline',
-              ]
-
-SCALE_LIST = ['prompt_with_personas_v4/agreeable_all_truefalse_short_changeline',
-              'prompt_with_personas_v4/conscientious_all_truefalse_short_changeline',
-              ]
-
-SCALE_LIST = ['prompt_with_personas_v5/convervatism_all_truefalse_short_changeline',
-              'prompt_with_personas_v5/imagination_all_truefalse_short_changeline',
-              'prompt_with_personas_v5/neuroticism_all_truefalse_short_changeline',
-              ]
-
-SCALE_LIST = ['uber_all_truefalse_short_changeline',
-              ]
-
-SCALE_LIST = [#'prompt_sensitivity/Truefalse_short-statement_double-bar-separated_colon-zero-space-ending_answer-asking', 
-              #'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-double-space-ending_answer-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-linebreak-ending_answer-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-linebreak-ending_response-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-single-space-ending_answer-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_colon-zero-space-ending_answer-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_linebreak-separated_question-mark-linebreak-ending_answer-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_single-space-separated_colon-zero-space-ending_answer-asking',
-              #'prompt_sensitivity/Truefalse_short-statement_triple-sharp-linebreak-separated_colon-linebreak-ending_answer-asking',
-              #'all_truefalse_short_changeline',
-              'prompt_with_personas_v3/extrovert-v1_all_truefalse_short_changeline',
-              #'prompt_with_personas_v3/extrovert-v2_all_truefalse_short_changeline',
-              'prompt_with_personas_v3/normal_all_truefalse_short_changeline',
-              'prompt_with_personas_v4/agreeable_all_truefalse_short_changeline',
-              'prompt_with_personas_v4/conscientious_all_truefalse_short_changeline',
-              'prompt_with_personas_v5/convervatism_all_truefalse_short_changeline',
-              'prompt_with_personas_v5/imagination_all_truefalse_short_changeline',
-              'prompt_with_personas_v5/neuroticism_all_truefalse_short_changeline',
-              'uber_all_truefalse_short_changeline',
+              'prompt_with_personas/ssi_all_truefalse_short_changeline',
+              'prompt_with_personas/extrovert-v1_all_truefalse_short_changeline',
+              'prompt_with_personas/extrovert-v2_all_truefalse_short_changeline',
+              'prompt_with_personas/normal_all_truefalse_short_changeline',
+              'prompt_with_personas/agreeable_all_truefalse_short_changeline',
+              'prompt_with_personas/conscientious_all_truefalse_short_changeline',
+              'prompt_with_personas/convervatism_all_truefalse_short_changeline',
+              'prompt_with_personas/imagination_all_truefalse_short_changeline',
+              'prompt_with_personas/neuroticism_all_truefalse_short_changeline',
+              'prompt_with_personas/uber_all_truefalse_short_changeline'
               ]
 
 seq2seq = ["t5-small", "t5-base", "google/flan-t5-small", "google/flan-t5-base", "google/flan-t5-large", "google/flan-t5-xl"]
